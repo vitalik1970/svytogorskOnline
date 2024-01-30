@@ -6,10 +6,10 @@ import LavraGallery from './LavraGallery'
 
 
 function MainPage() {
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [isGalleryOpenLaurel , setIsGalleryOpenLaurel ] = useState(false);
 
   const handleLandscapeClick = () => {
-    setIsGalleryOpen(!isGalleryOpen);
+    setIsGalleryOpenLaurel(!isGalleryOpenLaurel );
   };
 
   return (
@@ -21,7 +21,7 @@ function MainPage() {
 <div class="logo"><h1>SvytogorskOnline</h1></div>
    <div class="nav"> 
 <div class="nav__new"><h2>Svyatogorye photo gallery</h2></div>
- <div class="nav__gall-landscape" onClick={handleLandscapeClick}><h2>Landscape laurel</h2>{isGalleryOpen ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
+ <div class="nav__gall-landscape" onClick={handleLandscapeClick}><h2>Landscape laurel</h2>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
 <div class="nav__gall-artem"><h2>Monument photo</h2></div>
 <div class="nav__gall-history"><h2>Historical photos</h2>
 </div>
@@ -29,7 +29,7 @@ function MainPage() {
 
  
    <PhotoStella/> 
-   <LavraGallery isGalleryOpen={isGalleryOpen} setIsGalleryOpen={setIsGalleryOpen}/>
+   <LavraGallery isGalleryOpenLaurel ={isGalleryOpenLaurel } setIsGalleryOpenLaurel={setIsGalleryOpenLaurel }/>
 <div class="gallery__artem">
     <div class="gallery2">
         <img src="./img/artem/art1.JPG"/>

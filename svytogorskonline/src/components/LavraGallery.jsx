@@ -13,7 +13,7 @@ function Gallery(props) {
   const openModal = (imageSrc, index) => {
     setSelectedImage(imageSrc);
     setCurrentIndex(index);
-    props.setIsGalleryOpen(true);
+    props.setIsGalleryOpenLaurel(true);
   };
 
   const nextPhoto = () => {
@@ -65,7 +65,7 @@ function Gallery(props) {
             <img src={selectedImage} alt="" />
           </div>
        
-      <div className="gallery__landscape" style={{ display: props.isGalleryOpen ? 'block' : 'none' }}>
+      <div className="gallery__landscape" style={{ display: props.isGalleryOpenLaurel  ? 'block' : 'none' }}>
         <div className="gallery">
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
