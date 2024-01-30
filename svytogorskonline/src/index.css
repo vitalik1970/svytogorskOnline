@@ -1,0 +1,35 @@
+
+@import url('https://fonts.cdnfonts.com/css/queen-love-stories-free');
+:root {
+  --container-width: 1440px;
+  --sizeindex: calc(1vw + 1vh);
+  --secondary:#191919;
+  --family: 'MYRIADPRO', sans-serif;
+      --font2: 'PT Serif', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul, ul li {
+  list-style: none;
+}
+body {
+font-family: 'Queen Love Stories free', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #1A1A1A;
+  font-size: 20px;
+  position: relative;
+}
+
+img,
+svg {
+display: block;
+width: 100%;
+height: auto;
+}
