@@ -27,7 +27,7 @@ function Feedback(props) {
     // Добавляем email в объект data
     data.senderEmail = email;
 
-    fetch('https://creategift.website/send-email', {
+    fetch('https://ytcenko1970.byethost12.com/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
