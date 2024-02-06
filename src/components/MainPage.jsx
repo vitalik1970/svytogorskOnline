@@ -2,16 +2,20 @@ import React from 'react';
 import { useState } from 'react';
 import Slideshow from './Slideshow';
 import PhotoStella from './PhotoStella';
-import LavraGallery from './LavraGallery'
+import LavraGallery from './LavraGallery';
+import Feedback from './Feedback'
 
 
 function MainPage() {
   const [isGalleryOpenLaurel , setIsGalleryOpenLaurel ] = useState(false);
+  const [isFeedback, setIsFeedback] = useState(false);
 
   const handleLandscapeClick = () => {
     setIsGalleryOpenLaurel(!isGalleryOpenLaurel );
   };
-
+  const handleFeedbackClick = () => {
+    setIsFeedback(!isFeedback);
+  };
   return (
     
     <div>
@@ -23,13 +27,14 @@ function MainPage() {
 <div class="nav__new"><h2>Svyatogorye photo gallery</h2></div>
  <div class="nav__gall-landscape" onClick={handleLandscapeClick}><h2>Landscape laurel</h2>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
 <div class="nav__gall-artem"><h2>Monument photo</h2></div>
-<div class="nav__gall-history"><h2>Historical photos</h2>
-</div>
+<div class="nav__gall-history"><h2>Historical photos</h2></div>
+<div class="nav__gall-history" onClick={handleFeedbackClick}><h2>Feedback</h2></div>
     </div>
 
  
    <PhotoStella/> 
    <LavraGallery isGalleryOpenLaurel ={isGalleryOpenLaurel } setIsGalleryOpenLaurel={setIsGalleryOpenLaurel }/>
+   <Feedback isFeedback={isFeedback} setIsFeedback={setIsFeedback}/>
 <div class="gallery__artem">
     <div class="gallery2">
         <img src="./img/artem/art1.JPG"/>

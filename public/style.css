@@ -296,6 +296,39 @@ transform: scale(1.1);
     transform: translate(0%, -100%) rotate(.5turn);
     transition: 1s ease;
 }
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    /* margin: 0 auto; */
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5e5e5e;
+  }
+  
+  input, textarea {
+    color: #5e5e5e;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .button__form {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+.pm-generate {
+    width: 20px;
+}
+
 
 
 
