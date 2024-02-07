@@ -1,4 +1,4 @@
- name: Deploy to Server
+name: Deploy to Server
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@master
 
     - name: Copy files to server
       uses: appleboy/scp-action@master
@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         port: 21
         rm: true
-        source: "./build/*"  
+        source: "./*"  
         target: "/home/vol6_2/byethost12.com/b12_35910752"
