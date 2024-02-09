@@ -18,6 +18,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir:  /home/vol6_2/byethost12.com/b12_35910752
+          server-dir: ftpupload.net
 
 
