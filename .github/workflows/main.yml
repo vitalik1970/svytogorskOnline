@@ -6,12 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: ftp-action
-      uses: sebastianpopp/ftp-action@v2.0.0     
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          options: "--delete --asci"
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build/static"
+        remoteDir: "https://filemanager.ai/new/#/c/185.27.134.11/b12_35910752/eyJ0IjoiZnRwIiwiYyI6eyJ2IjowLCJwIjoiMmttZDNwZm4iLCJpIjoiLyJ9fQ%3D%3D"
+        options: "--delete --asci"
 
 
