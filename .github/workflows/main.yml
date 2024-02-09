@@ -13,7 +13,7 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         localDir: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build/static"
-        remoteDir: "www.filemanager.ai/new/#/c/185.27.134.11/b12_35910752/eyJ0IjoiZnRwIiwiYyI6eyJ2IjowLCJwIjoiMmttZDNwZm4iLCJpIjoiLyJ9fQ%3D%3D/htdocs"
+        remoteDir: "www.filemanager.ai/new/#/c/185.27.134.11/b12_35910752/eyJ0IjoiZnRwIiwiYyI6eyJ2IjowLCJwIjoiMmttZDNwZm4iLCJpIjoiLyJ9fQ%3D%3D"
         options: "--delete --asci"
 
 
