@@ -9,7 +9,7 @@
     "nvm": "^0.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "stable": "^0.1.8",
     "web-vitals": "^2.1.4"
   },
@@ -22,7 +22,10 @@
   "eslintConfig": {
     "overrides": [
       {
-        "files": ["**/*.ts", "**/*.tsx"],
+        "files": [
+          "**/*.ts",
+          "**/*.tsx"
+        ],
         "parser": "@typescript-eslint/parser",
         "parserOptions": {
           "ecmaVersion": 2018,
@@ -32,7 +35,9 @@
           },
           "warnOnUnsupportedTypeScriptVersion": true
         },
-        "plugins": ["@typescript-eslint"],
+        "plugins": [
+          "@typescript-eslint"
+        ],
         "rules": {
           "default-case": "off",
           "no-dupe-class-members": "off",
@@ -41,15 +46,19 @@
           "@typescript-eslint/no-array-constructor": "warn",
           "@typescript-eslint/no-namespace": "error",
           "no-unused-vars": "off",
-          "@typescript-eslint/no-unused-vars": ["warn", {"args": "none", "ignoreRestSiblings": true}],
+          "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+              "args": "none",
+              "ignoreRestSiblings": true
+            }
+          ],
           "no-useless-constructor": "off",
           "@typescript-eslint/no-useless-constructor": "warn"
         }
       }
     ]
-  
-  
-   },
+  },
   "browserslist": {
     "production": [
       ">0.2%",
