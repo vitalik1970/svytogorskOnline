@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 21
           rm: true
-          source: "./build/*"  
+          source: "/github/workspace/build/static/*"   
           target: "/home/vol6_2/byethost12.com/b12_35910752"
 
 
