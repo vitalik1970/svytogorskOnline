@@ -1,19 +1,18 @@
-name: Deploy via ftp
 on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    name: Deploy
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Upload ftp
-      uses: sebastianpopp/ftp-action@releases/v2
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build/static"
-        remoteDir: "www.ftpupload.net"
-        options: "--delete --asci"
+        server: ftpupload.net
+        username: b12_35910752
+        password: ${{ secrets.ftp_password }}
 
 
