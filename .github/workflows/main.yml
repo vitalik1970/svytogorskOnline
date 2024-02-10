@@ -7,6 +7,11 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: path/to/artifact
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
