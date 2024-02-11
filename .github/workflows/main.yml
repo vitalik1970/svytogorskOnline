@@ -21,3 +21,4 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         port: 21
         protocol: FTP
+        server-dir: "ytcenko1970.byethost12.com/htdocs/"
