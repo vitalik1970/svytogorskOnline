@@ -37,5 +37,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 21
-          local-dir: "/static/*"   
+          local-dir: "github.com/vitalik1970/svytogorskOnline/tree/master/build/"   
           server-dir: "htdocs/"
