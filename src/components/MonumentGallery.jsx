@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function MonumentGallery({ src, onClick }) {
+function GalleryImage({ src, onClick }) {
   return <img src={src} alt="gallery" onClick={onClick} />;
 }
 
