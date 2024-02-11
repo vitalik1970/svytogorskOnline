@@ -16,10 +16,10 @@ jobs:
     - name: Deploy to Hosting
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        host: 	ftpupload.net
+        server: 	ftpupload.net
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
         port: 21
-        rm: true
-        source: "./*"
-        target: "htdocs/"
+        protocol: FTP
+        local-dir: "/github.com/vitalik1970/svytogorskOnline/tree/master/build/static/"
+        server-dir: "www.filemanager.ai/new/#/c/185.27.134.11/b12_35910752/eyJ0IjoiZnRwIiwiYyI6eyJ2IjowLCJwIjoiMmttZDNwZm4ifX0/"
