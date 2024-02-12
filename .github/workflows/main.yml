@@ -37,5 +37,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 21
-          local-dir: "build/static/"   
+          local-dir: "./"   
           server-dir: "htdocs/"
