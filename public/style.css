@@ -152,7 +152,9 @@ transition: transform 0.3s ease;
 .nav__gall-history{
 cursor: pointer;
     transition: transform 0.3s ease;
-    max-width: 300px;
+    max-width: 330px;
+    display: flex;
+    gap: 15px;
 }
 .nav__gall-history:hover{
 transform: scale(1.1);
