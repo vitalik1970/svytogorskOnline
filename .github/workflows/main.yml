@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.1
             
         with:
-          path: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build"
+          path: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build/static/js/"
           repository: "https://github.com/vitalik1970/svytogorskOnline/"
         
               
