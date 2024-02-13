@@ -228,7 +228,7 @@ font-family: 'Queen Love Stories free', sans-serif;
 /* color: rgba(250, 250, 250, .9); */
 letter-spacing: 1.3px;
 /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); */
-/* color: #fff; */
+color: #fff;
 }
 .nav {
   display: flex;
