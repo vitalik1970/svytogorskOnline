@@ -24,18 +24,26 @@ jobs:
       - name: Build project
         run: npm run build
 
-  deploy:
-    needs: build
+  upload:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4.3.1
-            
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v2
         with:
-          path: "https://github.com/vitalik1970/svytogorskOnline/tree/master/build/static/js/"
-          repository: "https://github.com/vitalik1970/svytogorskOnline/"
-        
-              
-              
-            
+          name: build
+          path: build
+
+      - name: Upload files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ftpupload.net
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: ./build
+          server-dir: htdocs
