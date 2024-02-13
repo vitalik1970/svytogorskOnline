@@ -14,6 +14,12 @@ function MainPage() {
   const [isGalleryOpenMonument , setIsGalleryOpenMonument ] = useState(false);
   const [isGalleryOpenHistory , setIsGalleryOpenHistory ] = useState(false);
 
+  const [showPhotoGallery, setshowPhotoGallery] = useState(false);
+
+
+  const clickShowPhotoGallery = () => {
+    setshowPhotoGallery(!showPhotoGallery)
+  }
   const handleLandscapeClick = () => {
     setIsGalleryOpenLaurel(!isGalleryOpenLaurel );
   };
@@ -31,8 +37,29 @@ function MainPage() {
     <div>
        
       <div class="main__wrapper">
-        <Slideshow/>        
-<div class="logo"><h1>SvytogorskOnline</h1></div>
+        <Slideshow/>  
+        <header class="transparent">
+		<div class="container">
+			<div class="header__top">
+            	
+      <div class="logo"><h2>SvytogorskOnline</h2></div>
+
+			</div>
+			<div class="header_wrap">
+				<nav class="head_menu">
+<ul class=""><li ><a href="./index.html">HOME</a></li>
+<li  class=""><a onClick={clickShowPhotoGallery} >PHOTOGALLERY</a></li>
+<li   class=""><a href="https://wow-wedding.com/portfolios/">PHOTOGALLERY</a></li>
+<li   class=""><a href="https://wow-wedding.com/venues/">VENUES</a></li>
+<li   class=""><a href="https://wow-wedding.com/media/">PRESS</a></li>
+<li   class=""><a onClick={handleFeedbackClick}>CONTACT</a></li>
+</ul>										
+
+				</nav>	
+			</div>
+		</div>
+	</header>      
+{showPhotoGallery ?
    <div class="nav"> 
 <div class="nav__new"><h2>Svyatogorye photo gallery</h2></div>
  <div class="nav__gall-landscape" onClick={handleLandscapeClick}><h2>Landscape laurel</h2>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
@@ -40,7 +67,7 @@ function MainPage() {
 <div class="nav__gall-history" onClick={handleHistoryClick}><h2>Historical photos</h2>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
 <div class="nav__gall-history" onClick={handleFeedbackClick}><h2>Feedback</h2></div>
     </div>
-
+: ''}
  
    <PhotoStella/> 
    <LavraGallery isGalleryOpenLaurel ={isGalleryOpenLaurel } setIsGalleryOpenLaurel={setIsGalleryOpenLaurel }/>
