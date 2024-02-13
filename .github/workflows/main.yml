@@ -1,4 +1,4 @@
-name: Upload to FTP Hosting
+name: Deploy to Server
 
 on:
   push:
@@ -6,7 +6,32 @@ on:
       - master
 
 jobs:
-  upload:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Save build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +44,7 @@ jobs:
           name: build
           path: build
 
-      - name: Upload files via FTP
+      - name: Deploy to Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftpupload.net
