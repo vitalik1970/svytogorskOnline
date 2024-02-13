@@ -84,7 +84,7 @@ header .header__top {
 
     border-bottom: 1px solid #fff;
 }
-header .header__top .header_phone {
+.header__top .header_phone {
     display: inline-block;
     color: #fff;
     font-size: 12px;
@@ -92,7 +92,7 @@ header .header__top .header_phone {
     letter-spacing: 1.2px;
     text-transform: uppercase;
 }
-header .header__top .logo_wrap img {
+.header__top .logo_wrap img {
     max-width: 100%;
 }
 .toggle_mnu {
@@ -125,7 +125,7 @@ header .header__top .logo_wrap img {
     margin: auto;
     z-index: 200;
 }
-header.transparent .sw-topper {
+.transparent .sw-topper {
     background: #fff;
 }
 
@@ -186,7 +186,7 @@ header.transparent .sw-topper {
     -webkit-border-radius: 2px;
     border-radius: 2px;
 }
-header .header_wrap {
+ .header_wrap {
     padding: 5px 0 13px;
     display: -webkit-box;
     display: -webkit-flex;
