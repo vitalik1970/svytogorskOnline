@@ -44,13 +44,14 @@ jobs:
           name: build
           path: build
 
-      - name: Deploy to Server
+      - name: Deploy to Server using SFTP
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftpupload.net
           username: b12_35910752
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
+          port: 22  # Порт для SFTP обычно 22
+          protocol: sftp
           local-dir: ./build/
           server-dir: htdocs/
+
