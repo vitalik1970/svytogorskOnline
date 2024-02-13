@@ -81,7 +81,7 @@ svg {
     padding: 0 37px;
 }
 header .header__top {
-    
+
     border-bottom: 1px solid #fff;
 }
 header .header__top .header_phone {
@@ -200,6 +200,7 @@ header .header_wrap {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    
 }
 .head_menu>ul>li {
     display: inline-block;

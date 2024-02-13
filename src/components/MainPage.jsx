@@ -49,9 +49,9 @@ function MainPage() {
 				<nav class="head_menu">
 <ul class=""><li ><a href="./index.html">HOME</a></li>
 <li  class=""><a onClick={clickShowPhotoGallery} >PHOTOGALLERY</a></li>
-<li   class=""><a href="https://wow-wedding.com/portfolios/">PHOTOGALLERY</a></li>
-<li   class=""><a href="https://wow-wedding.com/venues/">VENUES</a></li>
-<li   class=""><a href="https://wow-wedding.com/media/">PRESS</a></li>
+<li   class=""><a href="#">PHOTOGALLERY</a></li>
+<li   class=""><a href="#">VENUES</a></li>
+<li   class=""><a href="#">PRESS</a></li>
 <li   class=""><a onClick={handleFeedbackClick}>CONTACT</a></li>
 </ul>										
 
@@ -65,7 +65,6 @@ function MainPage() {
  <div class="nav__gall-landscape" onClick={handleLandscapeClick}><h2>Landscape laurel</h2>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
 <div class="nav__gall-artem" onClick={handleMonumentClick}><h2>Monument photo</h2>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
 <div class="nav__gall-history" onClick={handleHistoryClick}><h2>Historical photos</h2>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
-<div class="nav__gall-history" onClick={handleFeedbackClick}><h2>Feedback</h2></div>
     </div>
 : ''}
  
