@@ -80,11 +80,11 @@ svg {
 .main__wrapper {
     padding: 0 37px;
 }
-header .header__top {
+.header__top {
 
     border-bottom: 1px solid #fff;
 }
-.header__top .header_phone {
+/* .header__top .header_phone {
     display: inline-block;
     color: #fff;
     font-size: 12px;
@@ -112,14 +112,14 @@ header .header__top {
 }
 .toggle_mnu span {
     display: block;
-}
+} */
 .head_menu>ul>li a {
     color: #fff;
     font-size: 15px;
     letter-spacing: 1.5px!important;
     cursor: pointer;
 }
-.sandwich {
+/* .sandwich {
     width: 29px;
     height: 22px;
     position: absolute;
@@ -129,15 +129,15 @@ header .header__top {
     right: 0;
     margin: auto;
     z-index: 200;
-}
-.transparent .sw-topper {
+} */
+/* .transparent .sw-topper {
     background: #fff;
 }
 
 .toggle_mnu span {
     display: block;
-}
-.sw-topper {
+} */
+/* .sw-topper {
     position: relative;
     top: 0;
     width: 29px;
@@ -153,8 +153,8 @@ header .header__top {
     display: block;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-}
-.sw-bottom {
+} */
+/* .sw-bottom {
     position: relative;
     width: 29px;
     height: 2px;
@@ -173,8 +173,8 @@ header .header__top {
     transition-delay: .2s,0;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-}
-.sw-footer {
+} */
+/* .sw-footer {
     position: relative;
     width: 29px;
     height: 2px;
@@ -190,7 +190,7 @@ header .header__top {
     transition-delay: .1s;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-}
+} */
  .header_wrap {
     padding: 5px 0 13px;
     display: -webkit-box;
@@ -247,10 +247,6 @@ font-family: 'Queen Love Stories free', sans-serif;
    cursor: pointer;
 transition: transform 0.3s ease;
 }
-/* .foto__stella:hover{
-    transform: scale(1.2);
-} */
-
 /* ****************  галереии ************************* */
 .modal-content {
     width: 900px;
@@ -458,21 +454,50 @@ form {
     color: #5e5e5e;
   }
   
-  input, textarea {
+.feedback__form {
     color: #5e5e5e;
     padding: 5px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    background: none;
+    border-bottom: 1px solid #fff !important;
     resize: none;
+    border: none;
+  }
+  ::-webkit-input-placeholder { /* Для браузеров, основанных на WebKit, таких как Chrome и Safari */
+    color: #fff; /* Цвет placeholder */
   }
   
+  :-moz-placeholder { /* Для Firefox 18- */
+    color: #fff; /* Цвет placeholder */
+  }
+  
+  ::-moz-placeholder { /* Для Firefox 19+ */
+    color: #fff; /* Цвет placeholder */
+  }
+  
+  :-ms-input-placeholder { /* Для Internet Explorer */
+    color: #fff; /* Цвет placeholder */
+  }
   .button__form {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+        padding: 0 22px;
+        color: #fff;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 43px;
+        letter-spacing: 1.3px;
+        -webkit-border-radius: 22px;
+        border-radius: 22px;
+        border: 1px solid #fff;
+        min-width: 228px;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: transparent;
+        position: relative;
+        margin-top: 25px;
   }
 .pm-generate {
     width: 20px;

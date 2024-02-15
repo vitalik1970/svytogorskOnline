@@ -48,17 +48,17 @@ function Feedback(props) {
     <>
     {props.isFeedback ?
     <form id="feedbackForm">
-      <label htmlFor="name">Имя:</label>
-      <input type="text" id="name" placeholder="enter name" name="name" value={name} onChange={handleNameChange} />
+      <label htmlFor="name"></label>
+      <input type="text" id="name"  placeholder="NAME*" className='feedback__form' name="name" value={name} onChange={handleNameChange} />
 
-      <label htmlFor="email">Email:</label>
-      <input type="email" id="email" placeholder="enter email" name="email" value={email} onChange={handleEmailChange} />
+      <label htmlFor="email"></label>
+      <input type="email" id="email" placeholder="EMAIL*" className='feedback__form'  name="email" value={email} onChange={handleEmailChange} />
 
-      <label htmlFor="message">Сообщение:</label>
-      <textarea id="message" placeholder="enter message" name="message" value={message} onChange={handleMessageChange}></textarea>
+      <label htmlFor="message"></label>
+      <textarea id="message" placeholder="MESSAGE*" className='feedback__form'  name="message" value={message} onChange={handleMessageChange}></textarea>
 
       <button className="button__form" type="button" onClick={sendFeedback}>
-        Отправить
+        SEND
       </button>
     </form>
     : ''}
