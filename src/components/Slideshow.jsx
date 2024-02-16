@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const SlideShow = () => {
   const allImages = [
-    "./img/slav.png",
+    "./img/slav.jpg",
     "/img/slav1.png",
     "/img/slav2.png",
-    "/img/slav3.png",
+    "/img/slav3.jpg",
     "/img/slav4.png",
     "/img/slav5.jpg",
     "/img/slav6.jpg",
