@@ -43,12 +43,12 @@ function HistoryGallery(props) {
     "./img/history/his.jpg",
     "./img/history/his1.jpg",
     "./img/history/his2.png",
-    "./img/history/his3.png",
-    "./img/history/his4.png",
+    "./img/history/his3.jpg",
+    "./img/history/his4.jpg",
     "./img/history/his5.png",
-    "./img/history/his6.png",
+    "./img/history/his6.jpg",
     "./img/history/his7.png",
-    "./img/history/his8.png"
+    "./img/history/his8.jpg"
   ];
   
 
