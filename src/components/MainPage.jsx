@@ -52,7 +52,7 @@ function MainPage() {
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
 <li   class=""><a href="#">VENUES</a></li>
 <li   class=""><a href="#">PRESS</a></li>
-<li   class=""><a onClick={handleFeedbackClick}>CONTACT</a></li>
+<li   class=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>CONTACT</a></li>
 </ul>										
 
 				</nav>	
