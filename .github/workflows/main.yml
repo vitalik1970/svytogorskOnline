@@ -53,4 +53,4 @@ jobs:
           port: 21
           protocol: ftps
           local-dir: ./build/
-          server-dir: htdocs/
+          server-dir: svyatogorsk.online/htdocs/
