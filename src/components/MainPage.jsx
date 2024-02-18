@@ -50,8 +50,8 @@ function MainPage() {
 <ul class=""><li ><a href="./index.html">HOME</a></li>
 <li  class=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >PHOTOGALLERY</a></li>
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
-<li   class=""><a href="#">VENUES</a></li>
-<li   class=""><a href="#">PRESS</a></li>
+{/* <li   class=""><a href="#">VENUES</a></li>
+<li   class=""><a href="#">PRESS</a></li> */}
 <li   class=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>CONTACT</a></li>
 </ul>										
 

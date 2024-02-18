@@ -55,14 +55,15 @@ function Gallery(props) {
   return (
     <div>
        
-        <div  onClick={closeModal}>
+       
+          <div className="modal-content">            
+            <img src={selectedImage} alt="" />
+            <div  onClick={closeModal}>
         {isModalOpen ? <img src="./img/icon-close.png" alt="icon" className="close-img"/> : '' }
             </div>
            <div onClick={nextPhoto}> 
            {isModalOpen ? <img src="./img/next-icon.png" alt="icon" className="nex-img"/> : '' }  
           </div>
-          <div className="modal-content">            
-            <img src={selectedImage} alt="" />
           </div>
        
       <div className="gallery__landscape" style={{ display: props.isGalleryOpenLaurel  ? 'block' : 'none' }}>
