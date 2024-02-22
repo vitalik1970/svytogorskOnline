@@ -44,13 +44,11 @@ jobs:
           name: build
           path: build
 
-      - name: Deploy to Server using FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftps
-          local-dir: ./build/
-          server-dir: svyatogorsk.online/htdocs/
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Upload build to S3
+        run: |
+          aws s3 sync ./build s3://svytogorsk --region us-east-2
