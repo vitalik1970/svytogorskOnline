@@ -51,4 +51,4 @@ jobs:
 
       - name: Upload build to S3
         run: |
-          aws s3 sync ./local-folder s3://svytogorsk --region us-east-2
+          aws s3 sync ./build s3://svytogorsk --region us-east-2
