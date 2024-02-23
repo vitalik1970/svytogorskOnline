@@ -30,25 +30,14 @@ jobs:
           name: build
           path: build
 
-  deploy:
-    needs: build
+  upload:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      - name: Upload S3
+        uses: shallwefootball/upload-s3-action@v1.3.3
+            
         with:
-          name: build
-          path: build
-
-      - name: Install AWS CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y awscli
-
-      - name: Upload build to S3
-        run: |
-          aws s3 sync ./build s3://svytogorsk --region us-east-2
+          aws_key_id: AKIA6ODU6WWC2NOZA25H
+          aws_secret_access_key: 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
+          aws_bucket: svytogorsk
+          source_dir: 'dirname'
