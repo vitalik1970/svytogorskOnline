@@ -40,4 +40,4 @@ jobs:
           aws_key_id: AKIA6ODU6WWC2NOZA25H
           aws_secret_access_key: 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
           aws_bucket: svytogorsk
-          source_dir: ./actions/runs/8021366623/artifacts/1270086436
+          source_dir: 'build'
