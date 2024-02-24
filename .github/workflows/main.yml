@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Upload S3
+      - uses: actions/checkout@v4
       - uses: shallwefootball/upload-s3-action@v1.3.3
         with:
           aws_key_id: AKIA6ODU6WWC2NOZA25H
