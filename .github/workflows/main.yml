@@ -40,4 +40,4 @@ jobs:
           aws_key_id: AKIA6ODU6WWC2NOZA25H
           aws_secret_access_key: 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
           aws_bucket: svytogorsk
-          source_dir: 'https://github.com/vitalik1970/svytogorskOnline/actions/runs/8030919926/artifacts/1271995589'
+          source_dir: 'public'
