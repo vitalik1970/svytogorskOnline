@@ -1,25 +1,55 @@
-name: Upload a folder to S3
+name: Deploy to Server
 
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    
-    - name: Copy a folder to s3
-      uses: prewk/s3-cp-action@v2
-      with:
-        aws_access_key_id: AKIA6ODU6WWC2NOZA25H
-        aws_secret_access_key: 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
-        source: './public'
-        dest: 's3://svytogorsk'
-        aws_region: 'us-east-2'
-        flags: --recursive
 
-            
-       
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Save build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
+
+      - name: Copy a folder to s3
+        uses: prewk/s3-cp-action@v2
+        with:
+          aws_access_key_id: AKIA6ODU6WWC2NOZA25H
+          aws_secret_access_key: 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
+          source: './build'
+          dest: 's3://svytogorsk'
+          aws_region: 'us-east-2'
+          flags: '--recursive'
