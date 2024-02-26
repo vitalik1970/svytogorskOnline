@@ -47,9 +47,9 @@ jobs:
       - name: Copy a folder to s3
         uses: prewk/s3-cp-action@v2
         with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key_id: AKIA6ODU6WWCRHZAGW2W
+          aws_secret_access_key: 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
           source: './build'
-          dest: 's3://svytogorsk/build'
-          aws_region: 'us-east-2'
+          dest: 's3://svytogorsk/main'
+          aws_region: 'us-east-1'
           flags: '--recursive'
