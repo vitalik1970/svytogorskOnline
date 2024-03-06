@@ -1,19 +1,22 @@
-@font-face {
+/* @font-face {
     font-family: 'MYRIADPRO';
     src: url("../fonts/MYRIADPRO-REGULAR.woff")format("woff");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-}
-@font-face {
+} */
+/* @font-face {
     font-family: 'PT Serif';
     src: url("./fonts/PTSerif-Regular.woff")format("woff");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-}
-@import url('https://fonts.cdnfonts.com/css/queen-love-stories-free');
-@import url('https://fonts.cdnfonts.com/css/futura-pt');
+} */
+@font-face{font-family:neutral face;font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
+@font-face{font-family:neutral face;font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
+@font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
+/* @import url('https://fonts.cdnfonts.com/css/queen-love-stories-free');
+@import url('https://fonts.cdnfonts.com/css/futura-pt'); */
 :root {
     --container-width: 1440px;
     --sizeindex: calc(1vw + 1vh);

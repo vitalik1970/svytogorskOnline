@@ -6,7 +6,9 @@ import LavraGallery from './LavraGallery';
 import MonumentGallery from './MonumentGallery';
 import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
-import Gratters from './Gratters'
+// import DisqusComments from './DisqusComments';
+// import Gratters from './Gratters';
+import { Helmet } from 'react-helmet';
 
 
 function MainPage() {
@@ -38,9 +40,16 @@ function MainPage() {
     setIsFeedback(!isFeedback);
   };
   return (
-    
-    <div>
-       
+    <>
+    <Helmet>
+      <title>Svyatogorsk in photographs</title>
+      <link rel="canonical" href="https://svyatogorsk.online/" />
+      <meta name="google-site-verification" content="qJXzHcl4xTnWqFCbMM9ngds8qYmW9BDu2HS3pxiqqhA" />
+    <meta property="title" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery"/>
+    <meta name="keywords" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery, bridge over the river"/>
+    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs
+    "/>
+    </Helmet>
       <div className="main__wrapper">
         <Slideshow/>  
         <header className="transparent">
@@ -55,7 +64,7 @@ function MainPage() {
 <ul className=""><li ><a href="./index.html">HOME</a></li>
 <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >PHOTOGALLERY</a></li>
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
-<li   className=""><a onClick={handleMessageClick} style={{color: isMessage ? '#ffa025' : ''}}>LEAVE FEEDBACK</a></li>
+<li   className=""><a onClick={handleMessageClick} href="http://localhost:3000/disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>LEAVE FEEDBACK</a></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>CONTACT</a></li>
 </ul>										
 
@@ -76,10 +85,10 @@ function MainPage() {
    <LavraGallery isGalleryOpenLaurel ={isGalleryOpenLaurel } setIsGalleryOpenLaurel={setIsGalleryOpenLaurel }/>
    <MonumentGallery isGalleryOpenMonument ={isGalleryOpenMonument} setIsGalleryOpenMonument={setIsGalleryOpenMonument }/>
    <HistoryGallery isGalleryOpenHistory={isGalleryOpenHistory} setIsGalleryOpenHistory={setIsGalleryOpenHistory}/>
-   <Gratters isMessage={isMessage} setIsMessage={setIsMessage}/>
+   {/* <DisqusComments isMessage={isMessage} setIsMessage={setIsMessage}/> */}
    <Feedback isFeedback={isFeedback} setIsFeedback={setIsFeedback}/>
 </div>
-    </div>
+    </>
   )
 }
 
