@@ -600,3 +600,9 @@ margin-bottom: 15px;
     }
 }
 
+.embed-refresh-v2 #reactions-promotion .reaction-items .reaction-items__container--refresh {
+    gap: 0;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: none;
+}

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 
 function GalleryImage({ src, onClick }) {
-  return <img src={src} alt="gallery" onClick={onClick} />;
+  return <img src={src} alt="gallery" onClick={onClick}/>;
 }
 
 function HistoryGallery(props) {
@@ -40,6 +40,7 @@ function HistoryGallery(props) {
     setCurrentIndex(index);
     setModalOpen(true);
   };
+  
   const images = [
     "./img/history/his.jpg",
     "./img/history/his1.jpg",
@@ -52,7 +53,6 @@ function HistoryGallery(props) {
     "./img/history/his8.jpg"
   ];
   
-
   return (
     <>
       <Helmet>
@@ -82,8 +82,6 @@ function HistoryGallery(props) {
          
         </div>
       </div>
-
-       
     </>
   );
 }

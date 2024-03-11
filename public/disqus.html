@@ -72,26 +72,37 @@ font-family: 'Queen Love Stories free', sans-serif;
     padding: 20px 20px 0 20px;
 }
 body {
-    background-image: url('./img/artem/art2.jpg');
+    background-image: url('./img/slav5.jpg');
     background-position: center center; 
     background-size: cover;
     background-repeat: no-repeat;
 }
 #disqus_thread {
-    width: 600px;
-    margin: 30px auto;
+  
      
 }
-.prompt {
-    
-}
+
 .post-messager p {
     color: #fff!important;
 }
 .post-content .post-message p:last-child {
     color: #fff!important;
 }
+.reaction-items  .has-selection .counts-visible {
+  display: none;
+  opacity: 0;  
+}
+#reactions.reactions-refresh {
+    margin-bottom: 24px;
+    display: none;
+}
+.disqus {
+    width: 600px;
+    height: 600px;
+    margin: 30px auto;
+}
 </style>
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -116,7 +127,7 @@ body {
 		</div>
 	</header>   
     <div style="opacity: 0; display: flex; font-size: 14px;"><h1>Svytogorsk</h1><h1>Святогорск</h1></div>
-    <div id="disqus_thread"></div>
+    <div id="disqus_thread" class="disqus"></div>
     <script>
         /**
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -135,7 +146,7 @@ body {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-   
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     <script id="dsq-count-scr" src="//svyatogorsk-online.disqus.com/count.js" async></script>
   </body>
 </html>

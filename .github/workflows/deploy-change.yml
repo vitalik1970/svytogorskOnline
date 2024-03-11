@@ -57,3 +57,6 @@ jobs:
           protocol: ftps
           local-dir: ./build/
           server-dir: svyatogorsk.online/htdocs/
+
+      - name: Set environment variable with output value
+        run: echo "USE_LOCK=${{ steps.get_all_changed_files.outputs.files_changed }}" >> $GITHUB_ENV
