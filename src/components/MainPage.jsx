@@ -64,7 +64,7 @@ function MainPage() {
 <ul className=""><li ><a href="./index.html">HOME</a></li>
 <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >PHOTOGALLERY</a></li>
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
-<li   className=""><a onClick={handleMessageClick} href="http://localhost:3000/disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>LEAVE FEEDBACK</a></li>
+<li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>LEAVE FEEDBACK</a></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>CONTACT</a></li>
 </ul>										
 

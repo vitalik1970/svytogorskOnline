@@ -5,13 +5,13 @@
     font-weight: 400;
     font-display: swap;
 } */
-/* @font-face {
-    font-family: 'PT Serif';
-    src: url("./fonts/PTSerif-Regular.woff")format("woff");
+@font-face {
+    font-family: 'Queen Love Stories free', sans-serif;
+    src: url("./fonts/Queen-Love-Stories-free.ttf")format("woff");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-} */
+}
 @font-face{font-family:neutral face;font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
 @font-face{font-family:neutral face;font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
 @font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
