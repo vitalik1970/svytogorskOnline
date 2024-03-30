@@ -11,18 +11,18 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       
       - name: List changed files
         run: |
           git diff-tree --no-commit-id --name-only -r ${{ github.sha }} > changed_files.txt
           
-      - name: Read changed files
-        id: read_files
+      - name: Set output
+        id: set_output
         run: |
-          echo "::set-output name=files::$(cat changed_files.txt)"
+          echo "files=$(cat changed_files.txt)" >> $GITHUB_ENV
 
       - name: Display changed files
         run: |
           echo "Changed files:"
-          echo "${{ steps.read_files.outputs.files }}"
+          echo "${{ env.files }}"
