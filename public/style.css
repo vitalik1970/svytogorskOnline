@@ -611,3 +611,8 @@ margin-bottom: 15px;
         font-size: 15px;   
     }
 }
+@media (max-width: 480px){
+    .head_menu>ul>li {
+        margin-right: 20px;
+    }
+}
