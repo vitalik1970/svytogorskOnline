@@ -24,7 +24,9 @@ jobs:
           git diff --name-only ${{ github.base_ref }} ${{ github.sha }} > changed_files.txt
           
       - name: Display changed files
-        run: cat changed_files.txt
+        run: |
+          sleep 1
+          cat changed_files.txt
 
       - name: Save changed files as artifact
         uses: actions/upload-artifact@v4
