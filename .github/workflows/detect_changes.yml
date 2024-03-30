@@ -18,6 +18,8 @@ jobs:
           if ! git diff --quiet --exit-code ${{ github.base_ref }} ${{ github.sha }}; then
             echo "Git diff command failed or there are no changes."
             exit 1
+          else
+            echo "Git diff command executed successfully."
           fi
           git diff --name-only ${{ github.base_ref }} ${{ github.sha }} > changed_files.txt
           
