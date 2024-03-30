@@ -15,10 +15,14 @@ jobs:
       
       - name: List changed files
         run: |
+          if ! git diff --quiet --exit-code ${{ github.base_ref }} ${{ github.sha }}; then
+            echo "Git diff command failed or there are no changes."
+            exit 1
+          fi
           git diff --name-only ${{ github.base_ref }} ${{ github.sha }} > changed_files.txt
           
       - name: Display changed files
-        run: echo changed_files.txt
+        run: cat changed_files.txt
 
       - name: Save changed files as artifact
         uses: actions/upload-artifact@v4
