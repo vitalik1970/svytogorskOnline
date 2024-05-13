@@ -17,7 +17,7 @@ function MainPage() {
   const [isGalleryOpenMonument , setIsGalleryOpenMonument ] = useState(false);
   const [isGalleryOpenHistory , setIsGalleryOpenHistory ] = useState(false);
   const [isMessage, setIsMessage] = useState('');
-
+  const [isPurpose, setIsPurpose] = useState(false); 
   const [showPhotoGallery, setshowPhotoGallery] = useState(false);
 
 
@@ -39,6 +39,9 @@ function MainPage() {
   const handleFeedbackClick = () => {
     setIsFeedback(!isFeedback);
   };
+  const handlePurposeClick = () => {
+    setIsPurpose(!isPurpose);
+  };
   return (
     <>
     <Helmet>
@@ -46,8 +49,9 @@ function MainPage() {
       <link rel="canonical" href="https://svyatogorsk.online/" />
       <meta name="google-site-verification" content="qJXzHcl4xTnWqFCbMM9ngds8qYmW9BDu2HS3pxiqqhA" />
     <meta property="title" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery"/>
-    <meta name="keywords" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery, bridge over the river"/>
-    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs
+    <meta name="keywords" content="Svyatogorsk photographs, photo of Svyatogorsk Lavra, reserve Holy Mountains, monument to Artem, bridge of the Seversky Donets River, Svyatogorsk Monastery, bridge over the river, military photos of Svyatogorsk"/>
+
+    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs, post-war revival
     "/>
     </Helmet>
       <div className="main__wrapper">
@@ -65,7 +69,8 @@ function MainPage() {
 <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >PHOTOGALLERY</a></li>
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>LEAVE FEEDBACK</a></li>
-{/* <li   className=""><a onClick={handleFeedbackClick} href="./purpose_project.html"  style={{color: isFeedback ? '#ffa025' : ''}}>PURPOSE PROJECT</a></li> */}
+<li   className=""><a onClick={handlePurposeClick} href="./purpose_project.html"  style={{color: isPurpose ? '#ffa025' : ''}}>PURPOSE PROJECT</a></li>
+{/* <li   className=""><a onClick={handleChatClick} href="./svytogorsk-chat/index.html"  style={{color: isFeedback ? '#ffa025' : ''}}>CHAT</a></li> */}
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>CONTACT</a></li>
 </ul>										
 				</nav>	
@@ -88,6 +93,9 @@ function MainPage() {
    {/* <DisqusComments isMessage={isMessage} setIsMessage={setIsMessage}/> */}
    <Feedback isFeedback={isFeedback} setIsFeedback={setIsFeedback}/>
 </div>
+<a href='https://creategift.website/' title="creation of creative low-cost websites"></a>
+<a href='https://proxiedmail.com/' title="Create proxy-email"></a>
+<a href="https://meetsometimes.com/" title="site of interesting meetings"></a>
     </>
   )
 }
