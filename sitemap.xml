@@ -18,4 +18,10 @@
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
+     <url>
+      <loc>https://svyatogorsk.online/purpose_project_ru.html</loc>
+      <lastmod>2024-05-12</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
 </urlset>
