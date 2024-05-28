@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+
 
 
 function GalleryImage({ src, onClick }) {
-  return <img src={src} alt="gallery" onClick={onClick} />;
+  return <img src={src} alt="photos of Artem's papyatnik" onClick={onClick} />;
 }
 
 function MonumentGallery(props) {
@@ -52,23 +52,16 @@ function MonumentGallery(props) {
 
   return (
     <>
-      <Helmet>
-      <title>Svyatogorsk in photographs</title>
-     
-      <meta name="yandex-verification" content="904340a458332f05" />
-      <meta name="google-site-verification" content="qJXzHcl4xTnWqFCbMM9ngds8qYmW9BDu2HS3pxiqqhA" />
-    <meta property="title" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery"/>
-    <meta name="keywords" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery, bridge over the river"/>
-    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs
-    "/>
-    </Helmet> 
+      
+          <div className="modal-content">  
+          <div className='gallery__close-next' >
         <div  onClick={closeModal}>
         {isModalOpen ? <img src="./img/icon-close.png" alt="icon" className="close-img"/> : '' }
             </div>
            <div onClick={nextPhoto}> 
            {isModalOpen ? <img src="./img/next-icon.png" alt="icon" className="nex-img"/> : '' }  
           </div>
-          <div className="modal-content">            
+          </div>          
             <img src={selectedImage} alt="" />
           </div>
        
