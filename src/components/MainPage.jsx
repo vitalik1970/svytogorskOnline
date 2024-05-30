@@ -8,7 +8,6 @@ import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
 // import DisqusComments from './DisqusComments';
 // import Gratters from './Gratters';
-import { Helmet } from 'react-helmet';
 
 
 function MainPage() {
@@ -19,6 +18,7 @@ function MainPage() {
   const [isMessage, setIsMessage] = useState('');
   const [isPurpose, setIsPurpose] = useState(false); 
   const [showPhotoGallery, setshowPhotoGallery] = useState(false);
+ 
 
 
   const clickShowPhotoGallery = () => {
@@ -44,17 +44,6 @@ function MainPage() {
   };
   return (
     <>
-    <Helmet>
-      <title>Svyatogorsk in photographs</title>
-      
-      <meta name="yandex-verification" content="904340a458332f05" />
-      <meta name="google-site-verification" content="qJXzHcl4xTnWqFCbMM9ngds8qYmW9BDu2HS3pxiqqhA" />
-    <meta property="title" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery"/>
-    <meta name="keywords" content="Svyatogorsk photographs, photo of Svyatogorsk Lavra, reserve Holy Mountains, monument to Artem, bridge of the Seversky Donets River, Svyatogorsk Monastery, bridge over the river, military photos of Svyatogorsk"/>
-
-    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs, post-war revival
-    "/>
-    </Helmet>
       <div className="main__wrapper">
         <Slideshow/>  
         <header className="transparent">

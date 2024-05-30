@@ -31,5 +31,27 @@
   </head>
   <body>
     <div id="root"></div>
+    <div class='navbar'>
+      <div class='navbar__taxi'>TAXI</div> 
+      <div class='navbar__taxi-content' style="display: none">
+        taxi city of Svyatogorsk
+        taxi-905
+        taxi 3202
+      </div> 
+     </div>
+     <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const taxiElement = document.querySelector('.navbar__taxi');
+          const taxiContent = document.querySelector('.navbar__taxi-content');
+
+          taxiElement.addEventListener('click', () => {
+              if (taxiContent.style.display === 'none' || taxiContent.style.display === '') {
+                  taxiContent.style.display = 'block';
+              } else {
+                  taxiContent.style.display = 'none';
+              }
+          });
+      });
+  </script>
   </body>
 </html>

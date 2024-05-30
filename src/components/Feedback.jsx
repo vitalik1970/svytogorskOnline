@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 
 function Feedback(props) {
   const [name, setName] = useState('');
@@ -46,20 +45,8 @@ function Feedback(props) {
   };
 
   return (
-    
-   <> 
-   <Helmet>
-      <title>Svyatogorsk in photographs</title>
-     
-      <meta name="yandex-verification" content="904340a458332f05" />
-      <meta name="google-site-verification" content="qJXzHcl4xTnWqFCbMM9ngds8qYmW9BDu2HS3pxiqqhA" />
-    <meta property="title" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery"/>
-    <meta name="keywords" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery, bridge over the river"/>
-    <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs
-    "/>
-    </Helmet> 
-    {props.isFeedback ?
-    <div className='feedback__wrapper'>
+  
+    <div className='feedback__wrapper' style={{ display: props.isFeedback   ? 'block' : 'none' }}>
     <div className='feedback__container'>
       <div className='feedback__contact'>
 
@@ -68,7 +55,7 @@ function Feedback(props) {
 
                 <ul className="social">
 
-                    <li className="social__item"><a href="https://www.instagram.com/iatsenko1748/"><img src="./img/icons/instagram.svg" alt="Link"/></a></li>
+                    <li className="social__item"><a href="https://www.instagram.com/iatsenko1748/"><img src="./img/icons/instagram.svg" alt="link instagram yatsenko v v"/></a></li>
                     <li className="social__item"><a  href="https://twitter.com/YcenkoVitalij"><span class="social__item-x"></span></a></li>
                     <li className="social__item"><a href="https://github.com/vitalik1970?tab=repositories"><img src="./img/icons/gitHub.svg" alt="Link"/></a></li>
                     <li className="social__item"><a href="https://www.linkedin.com/in/vitaliy-yatsenko-5806b5226/"><img src="./img/icons/linkedIn.svg" alt="Link"/></a></li>
@@ -104,7 +91,6 @@ function Feedback(props) {
                 border: '0'
             }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
-    : ''}</>
     
   );
 }

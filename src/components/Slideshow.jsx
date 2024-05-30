@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 const SlideShow = () => {
   const allImages = [
@@ -27,7 +27,7 @@ const SlideShow = () => {
 
   return (
     <>
-    <Helmet>
+    {/* <Helmet>
       <title>Svyatogorsk in photographs</title>
      
       <meta name="yandex-verification" content="904340a458332f05" />
@@ -36,8 +36,8 @@ const SlideShow = () => {
     <meta name="keywords" content="photographs of the city of Svyatogorsk, Svyatogorsk Lavra and the Holy Mountains reserve, monument to Artem, Seversky Donets river, monastic monastery, bridge over the river"/>
     <meta name="description" content="Sights of Svyatogorsk Lavra, Svyatogorsk National Reserve, the Holy Mountains reserve, the city of Svyatogorsk, Donetsk region, Kramatorsk region of Ukraine in photographs
     "/>
-    </Helmet>
-    <img className="slide" src={allImages[imgNum]} alt="slide_show" />
+    </Helmet> */}
+    <img className="slide" src={allImages[imgNum]} alt="фотографии Святогорска, Свято-Успенской Святогорской Лавры, реки Северский Донец, памятник Артему" />
     </>
   );
 };
