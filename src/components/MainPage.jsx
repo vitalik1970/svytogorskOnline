@@ -22,19 +22,22 @@ function MainPage() {
 
 
   const clickShowPhotoGallery = () => {
-    setshowPhotoGallery(!showPhotoGallery)
+    setshowPhotoGallery(!showPhotoGallery);
+    setIsGalleryOpenLaurel(false);
+    setIsGalleryOpenMonument(false);
+    setIsGalleryOpenHistory(false);
   }
   const handleMessageClick = () => {
     setIsMessage(!isMessage)
   }
   const handleLandscapeClick = () => {
-    setIsGalleryOpenLaurel(!isGalleryOpenLaurel );
+    setIsGalleryOpenLaurel(!isGalleryOpenLaurel);
   };
   const handleMonumentClick = () => {
-    setIsGalleryOpenMonument(!isGalleryOpenMonument );
+    setIsGalleryOpenMonument(!isGalleryOpenMonument);
   };
   const handleHistoryClick = () => {
-    setIsGalleryOpenHistory(!isGalleryOpenHistory );
+    setIsGalleryOpenHistory(!isGalleryOpenHistory);
   };
   const handleFeedbackClick = () => {
     setIsFeedback(!isFeedback);

@@ -42,7 +42,7 @@ function Gallery(props) {
   const images = [
     './img/land/land.jpeg',
     './img/land/land1.jpg',
-    './img/land/land2.jpg',
+    './img/land/land2.jpeg',
     './img/land/land3.jpeg',
     './img/land/land4.jpg',
     './img/land/land5.jpg',
@@ -65,7 +65,7 @@ function Gallery(props) {
            {isModalOpen ? <img src="./img/next-icon.png" alt="icon" className="nex-img"/> : '' }  
           </div>
           </div>          
-            <img src={selectedImage} alt="" />
+            <img src={selectedImage} className="modal-content-img" alt="" />
           </div>
        
       <div className="gallery__landscape" style={{ display: props.isGalleryOpenLaurel  ? 'block' : 'none' }}>
