@@ -54,8 +54,9 @@ function MainPage() {
 			<div className="header__top">
             	
       <div className="logo"><h2>SvytogorskOnline</h2></div>
-
+      
 			</div>
+      <hr/>
 			<div className="header_wrap">
 				<nav className="head_menu">
 <ul className=""><li ><a href="./index.html">HOME</a></li>
