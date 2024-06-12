@@ -49,6 +49,8 @@ function Gallery(props) {
     './img/land/land6.jpeg',
     './img/land/land7.jpg',
     './img/land/land8.jpg',
+    './img/land/land9.jpg',
+    './img/land/land10.jpg',
   ];
   
 

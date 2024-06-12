@@ -11,7 +11,8 @@ const SlideShow = () => {
     "/img/slav5.jpg",
     "/img/slav6.jpg",
     "/img/slav9.png",
-    "/img/slav10.jpg"
+    "/img/slav10.jpg",
+    "/img/slav11.jpg"
   ];
 
   const [imgNum, setImgNum] = useState(0);

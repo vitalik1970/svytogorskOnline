@@ -66,7 +66,7 @@ function Feedback(props) {
         </div>
     </div> 
     <form id="feedbackForm" className='feedbackform' >
-      <label htmlFor="name">Sorry, the form is temporarily unavailable.</label>
+      <label htmlFor="name">Извините, форма временно недоступна. Напишите пожалуйста на электронный адрес или оставте сообщение в чате</label>
       <input type="text" id="name" disabled placeholder="NAME*" className='feedback__form' name="name" value={name} onChange={handleNameChange} />
 
       <label htmlFor="email"></label>
@@ -89,7 +89,7 @@ function Feedback(props) {
                 width: '100%',
                 height: '350px',
                 border: '0'
-            }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe></div>
     </div>
     
   );
