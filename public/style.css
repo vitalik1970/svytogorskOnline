@@ -84,6 +84,22 @@ svg {
     justify-content: space-between;
     
 }
+.header_w {
+    padding: 5px 0 13px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    
+}
 .head_menu>ul>li {
     display: inline-block;
     position: relative;
@@ -441,6 +457,7 @@ transform: scale(1.1);
         height: -webkit-fill-available;
     }
     .feedback__container {
+        position: relative;
         display: flex;
         justify-content: flex-start;
         gap: 90px;
@@ -459,6 +476,19 @@ font-family: 'Futura PT', sans-serif;
 .feedback__contact p {
 margin-bottom: 15px;
 }
+.feedback__close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* padding: unset; */
+    width: 36px;
+    /* color: #fff; */
+    font-size: 36px;
+    margin: 20px;
+    border-radius: 8px;
+    border: none;
+}  
+
 .social {
     display: flex;
     column-gap: 30px;
@@ -900,6 +930,108 @@ align-items: center;
 width: 40px;
     }
 /* ****************** end  модальное окно ****************** */
-/* ****************** index.html   ****************** */
-
-/* ****************** фото  end ****************** */
+/* ****************** гамбургер   ****************** */
+.hamburger-menu {
+    position: relative;
+    display: none;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .hamburger.open .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .menu {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 246px;
+    background-color: rgb(143, 140, 140);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  .menu ul li .lng_btn {
+    display: flex;
+  }
+  .menu ul li summary h1{
+    display: block;
+ 
+    color: #333;
+    text-decoration: none;
+    font-size: 20px!important;
+    font-family: 'Queen Love Stories free', sans-serif;
+  }
+  .menu ul li a:hover {
+    background-color: #f0f0f0;
+  }
+  @media (max-width: 800px){
+    .hamburger-menu {
+     display: block;
+      }
+      .header_wrap {
+    display: none;
+      }
+      .lng_btn {
+        display: none;
+    
+    }
+  }
+  @media (max-width: 480px){
+  .hamburger {
+    width: 20px;
+    height: 17px;
+  }
+  .hamburger .bar {
+    height: 2px;
+  }
+}
+/* ****************** бургер  end ****************** */

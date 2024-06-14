@@ -20,6 +20,8 @@ function MainPage() {
   const [isPurpose, setIsPurpose] = useState(false); 
   const [showPhotoGallery, setshowPhotoGallery] = useState(false);
   const [lan, setLan] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  
  
 
 
@@ -28,6 +30,7 @@ function MainPage() {
     setIsGalleryOpenLaurel(false);
     setIsGalleryOpenMonument(false);
     setIsGalleryOpenHistory(false);
+    setIsOpen(!isOpen);
   }
   const handleMessageClick = () => {
     setIsMessage(!isMessage)
@@ -43,10 +46,15 @@ function MainPage() {
   };
   const handleFeedbackClick = () => {
     setIsFeedback(!isFeedback);
+    setIsOpen(!isOpen);
   };
   const handlePurposeClick = () => {
     setIsPurpose(!isPurpose);
   };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <div className="main__wrapper">
@@ -60,13 +68,47 @@ function MainPage() {
       <div className="lng_btn ">
       <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
         <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
-        
+    </div>
+    <div className="hamburger-menu">
+      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+      <nav className={`menu ${isOpen ? 'open' : ''}`}>
+        <ul>
+          <li><a className="lng_btn">
+      <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
+        <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
+    </a></li>
+
+    <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'ФОТОГАЛЕРЕЯ'}</a></li>
+          <li> <a className="css-modal-details">    
+      <details>
+          <summary><h1>{lan ? 'TAXI' : 'ТАКСИ'}</h1></summary>
+          <div className="cmc">
+              <div className="cmt">
+                  <div className="width-text">Ищите не дорогое такси в городе Святогорске ?<br/> В настоящее время в городе работают несколько служб такси</div> 
+                  <div className="width-text-905">
+                  <div className="width-text">Служба такси "Своё такси 905". Набирайте короткий номер "905"</div> <img src="./img/905.png" alt="icon" className=""/> </div>
+                  <div className="width-text-905">
+                  <div className="width-text">Единая служба заказа такси 3202. Набирайте короткий номер "3202"</div><img src="./img/3202.jpg" alt="icon" className=""/>  </div>
+              </div>
+          </div>
+      </details>
+      </a></li>
+      <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'ОСТАВИТЬ ОТЗЫВ'}</a></li>
+<li   className=""><a onClick={handlePurposeClick} href="./purpose_project.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'ЦЕЛЬ ПРОЕКТА'}</a></li>
+<li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'КОНТАКТЫ'}</a></li>
+        </ul>
+      </nav>
     </div>
 			</div>
       <hr/>
 			<div className="header_wrap">
 				<nav className="head_menu">
-<ul className=""><li ><a href="./index.html">{lan ? 'HOME' : 'ДОМ'}</a></li>
+<ul className="">
+  <li ><a href="./index.html">{lan ? 'HOME' : 'ДОМ'}</a></li>
 <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'ФОТОГАЛЕРЕЯ'}</a></li>
 {/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */} <div className="css-modal-details">    
       <details>

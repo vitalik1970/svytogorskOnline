@@ -43,11 +43,17 @@ function Feedback(props) {
         console.error('Ошибка:', error);
       });
   };
-
+const closeFeedback = () =>{
+  props.setIsFeedback(false)
+}
   return (
   
     <div className='feedback__wrapper' style={{ display: props.isFeedback   ? 'block' : 'none' }}>
+     
     <div className='feedback__container'>
+    <button  className="feedback__close-button" onClick={closeFeedback}>
+                            &times;
+      </button>
       <div className='feedback__contact'>
 
 <p>LOCATION OF THIS HISTORICAL AND NATURAL<br/>MONUMENT OBJECT</p>
