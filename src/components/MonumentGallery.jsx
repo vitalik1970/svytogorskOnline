@@ -46,7 +46,7 @@ function MonumentGallery(props) {
         "./img/artem/art3.jpg",
         "./img/artem/art4.jpeg",
         "./img/artem/art5.jpg",
-        "./img/artem/art6.jpg"
+        "./img/artem/art6.jpg",
   ];
   
 
@@ -66,7 +66,7 @@ function MonumentGallery(props) {
           </div>
        
       <div className="gallery__artem" style={{ display: props.isGalleryOpenMonument  ? 'block' : 'none' }}>
-        <div className="gallery2">
+        <div className="gallery">
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}

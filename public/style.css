@@ -266,27 +266,25 @@ transform: scale(1.1);
     width: 100%;
     top: 342px;
 }
-.gallery2 {
-    position: relative;
+.galleryy {
+   
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2;
+    width: 100%;
+    top: 342px;
 }
-.gallery3 {
-    position: relative;
+.galleryyy {
+    
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2;
+    width: 100%;
+    top: 342px;
 }
 
 .gallery img {
@@ -305,35 +303,33 @@ transform: scale(1.1);
     transform: scale(1.1);
 /* filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)) drop-shadow(0 12px 16px rgba(0,0,0,0.1)); */
 };
-.gallery2 img:hover {
+.galleryy img:hover {
     transform: scale(1.1);
 };
-.gallery3 img:hover {
+.galleryyy img:hover {
     transform: scale(1.1);
 };
-.gallery2 img {
+.galleryy img {
     height: auto;
-    width: 200px;
+    width: 160px;
     margin: 10px;
-    /* box-shadow: 0 0 0 5px #fff, 0 0 0 6px #919191; */
     border-width: 2px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-image: initial;
-    padding: 5px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        padding: 5px;
     transition: .3s linear;
     cursor: pointer;
-}
-.gallery3 img {
+};
+.galleryyy img {
     height: auto;
-    width: 200px;
+    width: 160px;
     margin: 10px;
-    /* box-shadow: 0 0 0 5px #fff, 0 0 0 6px #919191; */
     border-width: 2px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-image: initial;
-    padding: 5px;
+        border-style: solid;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        padding: 5px;
     transition: .3s linear;
     cursor: pointer;
 }
@@ -667,6 +663,7 @@ margin-bottom: 15px;
 
         }
     }
+    
     @media (max-width: 700px){
     .feedback__container {
        
@@ -679,11 +676,12 @@ margin-bottom: 15px;
     .logo h1 {
         font-size: 30px;
     }
+    .foto__stella {
+        display: none;
+}
     }
  @media (max-width: 600px){
-        .foto__stella {
-            display: none;
- }
+
  .transparent {
     padding: 0 25px;
 }
@@ -1024,7 +1022,16 @@ width: 40px;
         display: none;
     
     }
+
+.menu {
+    right: 807%;
   }
+}
+@media (max-width: 700px){
+    .menu {
+        right: 0;
+    }
+      }   
   @media (max-width: 480px){
   .hamburger {
     width: 20px;
@@ -1033,5 +1040,31 @@ width: 40px;
   .hamburger .bar {
     height: 2px;
   }
+  .css-modal-details details[open] .cmc {
+    left: -205px;
+   width: 100vw;
+   height: 100vh;
+}
+}
+@media (max-width: 430px) {
+    .css-modal-details details[open] .cmc {
+        left: -159px;
+    }
+}
+@media (max-width: 414px) {
+    .css-modal-details details[open] .cmc {
+        left: -147px;
+    }
+}
+@media (max-width: 390px) {
+    .css-modal-details details[open] .cmc {
+        left: -118px;
+    }
+}
+
+@media (max-width: 375px) {
+    .css-modal-details details[open] .cmc {
+        left: -104px;
+    }
 }
 /* ****************** бургер  end ****************** */

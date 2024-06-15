@@ -98,7 +98,7 @@ function MainPage() {
       </details>
       </a></li>
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'ОСТАВИТЬ ОТЗЫВ'}</a></li>
-<li   className=""><a onClick={handlePurposeClick} href="./purpose_project.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'ЦЕЛЬ ПРОЕКТА'}</a></li>
+<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'ЦЕЛЬ ПРОЕКТА'}</a></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'КОНТАКТЫ'}</a></li>
         </ul>
       </nav>

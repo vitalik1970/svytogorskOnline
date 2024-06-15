@@ -1,55 +1,55 @@
-name: Deploy to Server
+# name: Deploy to Server
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#   push:
+#     branches:
+#       - master
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build project
-        run: npm run build
+#       - name: Build project
+#         run: npm run build
 
-      - name: Save build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          path: build
+#       - name: Save build artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: build
+#           path: build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+#   deploy:
+#     needs: build
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: build
-          path: build
+#       - name: Download build artifact
+#         uses: actions/download-artifact@v4
+#         with:
+#           name: build
+#           path: build
 
-      - name: Copy a folder to s3
-        uses: prewk/s3-cp-action@v2
-        with:
-          aws_access_key_id: AKIA6ODU6WWCRHZAGW2W
-          aws_secret_access_key: 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
-          source: './build'
-          dest: 's3://svytogorsk/main'
-          aws_region: 'us-east-1'
-          flags: '--recursive'
+#       - name: Copy a folder to s3
+#         uses: prewk/s3-cp-action@v2
+#         with:
+#           aws_access_key_id: AKIA6ODU6WWCRHZAGW2W
+#           aws_secret_access_key: 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
+#           source: './build'
+#           dest: 's3://svytogorsk/main'
+#           aws_region: 'us-east-1'
+#           flags: '--recursive'

@@ -69,7 +69,7 @@ function HistoryGallery(props) {
           </div>
        
       <div className="gallery__history" style={{ display: props.isGalleryOpenHistory  ? 'block' : 'none' }}>
-        <div className="gallery3">
+        <div className="gallery">
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}
