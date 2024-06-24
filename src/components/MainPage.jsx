@@ -63,7 +63,7 @@ function MainPage() {
 		<div className="container">
 			<div className="header__top">
             	
-      <div className="logo"><h1>СВЯТОГОРСКФОТО</h1></div>
+      <div className="logo"><h1>СВЯТОГОРСК.ФОТО</h1></div>
 
       <div className="lng_btn ">
       <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
@@ -82,10 +82,10 @@ function MainPage() {
         <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
     </a></li>
 
-    <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'ФОТОГАЛЕРЕЯ'}</a></li>
+    <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
           <li> <a className="css-modal-details">    
       <details>
-          <summary><h1>{lan ? 'TAXI' : 'ТАКСИ'}</h1></summary>
+          <summary><h1>{lan ? 'TRANSPORT' : 'транспорт'}</h1></summary>
           <div className="cmc">
               <div className="cmt">
                   <div className="width-text">Ищите не дорогое такси в городе Святогорске ?<br/> В настоящее время в городе работают несколько служб такси</div> 
@@ -97,9 +97,9 @@ function MainPage() {
           </div>
       </details>
       </a></li>
-      <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'ОСТАВИТЬ ОТЗЫВ'}</a></li>
-<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'ЦЕЛЬ ПРОЕКТА'}</a></li>
-<li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'КОНТАКТЫ'}</a></li>
+      <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
+<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
+<li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'contact' : 'контакты'}</a></li>
         </ul>
       </nav>
     </div>
@@ -108,11 +108,12 @@ function MainPage() {
 			<div className="header_wrap">
 				<nav className="head_menu">
 <ul className="">
-  <li ><a href="./index.html">{lan ? 'HOME' : 'ДОМ'}</a></li>
-<li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'ФОТОГАЛЕРЕЯ'}</a></li>
-{/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */} <div className="css-modal-details">    
+  <li ><a href="./index.html">{lan ? 'HOME' : 'дом'}</a></li>
+<li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
+{/* <li   class=""><a href="#">PHOTOGALLERY</a></li> */}
+ <div className="css-modal-details">    
       <details>
-          <summary><h1>{lan ? 'TAXI' : 'ТАКСИ'}</h1></summary>
+          <summary>{lan ? 'TRANSPORT' : 'транспорт'}</summary>
           <div className="cmc">
               <div className="cmt">
                   <div className="width-text">Ищите не дорогое такси в городе Святогорске ?<br/> В настоящее время в городе работают несколько служб такси</div> 
@@ -124,10 +125,10 @@ function MainPage() {
           </div>
       </details>
       </div>
-<li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'ОСТАВИТЬ ОТЗЫВ'}</a></li>
-<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'ЦЕЛЬ ПРОЕКТА'}</a></li>
+<li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
+<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
 {/* <li   className=""><a href="./index_img.html"  style={{color: isFeedback ? '#ffa025' : ''}}>CHAT</a></li> */}
-<li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'КОНТАКТЫ'}</a></li>
+<li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'контакты'}</a></li>
 </ul>										
 				</nav>	
 			</div>
@@ -136,10 +137,10 @@ function MainPage() {
 {showPhotoGallery ?
    <div className="nav"> 
 
- <div className="nav__gall-landscape" onClick={handleLandscapeClick}><h3>{lan ? 'Svyatogorsk Lavra' : 'СВЯТОГОРСКАЯ ЛАВРА'}</h3>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
-<div class="nav__gall-artem" onClick={handleMonumentClick}><h3>{lan ? 'Monument photo' : 'ПАМЯТНИК АРТЕМА'}</h3>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
-<div class="nav__gall-history" onClick={handleHistoryClick}><h3>{lan ? 'Historical photos' : 'ИСТОРИЧЕСКИЕ ФОТО'}</h3>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
-<div class="nav__gall-ruined"><a href="./index_img.html"><h3>{lan ? 'RUINED CITY' : 'РАЗРУШЕННЫЙ ГОРОД'}</h3></a></div>
+ <div className="nav__gall-landscape" onClick={handleLandscapeClick}><h3>{lan ? 'Svyatogorsk Lavra' : 'святогорская лавра'}</h3>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
+<div class="nav__gall-artem" onClick={handleMonumentClick}><h3>{lan ? 'Monument photo' : 'памятник артема'}</h3>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
+<div class="nav__gall-history" onClick={handleHistoryClick}><h3>{lan ? 'Historical photos' : 'исторические фото'}</h3>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
+<div class="nav__gall-ruined"><a href="./index_img.html"><h3>{lan ? 'RUINED CITY' : 'война'}</h3></a></div>
     </div>
 : ''}
  

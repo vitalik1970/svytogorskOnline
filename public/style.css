@@ -6,6 +6,13 @@
     font-weight: 400;
     font-display: swap;
 }
+@font-face {
+    font-family: 'CyrillicGoth', sans-serif;
+    src: url("./fonts/ofont.ru_CyrillicGoth.ttf")format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
 @font-face{font-family:neutral face;font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
 @font-face{font-family:neutral face;font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
 @font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
@@ -64,8 +71,8 @@ svg {
 }
 .head_menu>ul>li a {
     color: #fff;
-    font-size: 15px;
-    letter-spacing: 1.5px!important;
+    font-size: 17px;
+    letter-spacing: 0.6px !important;
     cursor: pointer;
 }
  .header_wrap {
@@ -104,12 +111,13 @@ svg {
     display: inline-block;
     position: relative;
     line-height: 27px;
-    margin-right: 50px;
+    margin-right: 25px;
+    font-family: 'Deutsch Gothic', sans-serif;
 }
 .head_menu>ul>li a {
     color: #fff;
     font-size: 15px;
-    letter-spacing: 1.5px!important;
+    letter-spacing: 1.1px!important;
     cursor: pointer;
 }
 .logo {
@@ -126,7 +134,7 @@ color: #fff;
   display: flex;
   flex-direction: column;
   gap: 18px;
-font-family: 'Queen Love Stories free', sans-serif;
+  font-family: 'Deutsch Gothic', sans-serif;
     color: rgba(250, 250, 250, .9);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     padding: 0 37px;  
@@ -166,13 +174,13 @@ filter: brightness(2) grayscale(1) opacity(0.5);
   } */
 /* ****************  галереии ************************* */
 .modal-content {
-max-width: 1400px;
+max-width: 1350px;
     margin: 0 auto;
     position: relative;
 }
 .modal-content-img{
 width: 100%;
-max-height: 800px;
+max-height: 750px;
 }
 .modal-overlay {
     position: relative;
@@ -662,8 +670,7 @@ margin-bottom: 15px;
             justify-content: center;
 
         }
-    }
-    
+    }   
     @media (max-width: 700px){
     .feedback__container {
        
@@ -762,7 +769,7 @@ hr:after {
 /* ******************   модальное окно ****************** */
 .css-modal-details {
     display: inline-block;
-    margin-right: 50px; 
+    margin-right: 25px; 
     /* height: 60px;
     display:flex;
     align-items:center;
@@ -775,13 +782,14 @@ hr:after {
     /* margin: 10px; */
     text-decoration: none;
     position: relative;
-    /* font-size: 8px; */
+    font-size: 15px;
     line-height: 20px;
     /* padding: 12px 30px; */
     color: #FFF;
-    font-family: 'Queen Love Stories free', sans-serif;
+    font-family: 'Deutsch Gothic', sans-serif;
+    /* font-family: 'Queen Love Stories free', sans-serif; */
     font-weight: 400;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     /* background: #337AB7; */
     cursor: pointer;
     /* border: 2px solid #BFE2FF; */
@@ -789,6 +797,7 @@ hr:after {
     z-index: 1;   
 }
 .css-modal-details summary h1{
+    /* font-family: 'Deutsch Gothic', sans-serif; */
     font-family: 'Queen Love Stories free', sans-serif;
     font-weight: 400;
     font-size: 15px;
