@@ -1,7 +1,6 @@
-
-@font-face {
-    font-family: 'Deutsch Gothic', sans-serif;
-    src: url("./fonts/ofont.ru_Deutsch\ Gothic.ttf")format("woff");
+ @font-face {
+    font-family: 'Deutsch Gothic';
+    src: url('./fonts/ofont.ru_Deutsch\ Gothic.ttf')format('truetype');
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -24,8 +23,8 @@
     --container-width: 1440px;
     --sizeindex: calc(1vw + 1vh);
     --secondary:#191919;
-    --family: 'MYRIADPRO', sans-serif;
-        --font2: 'PT Serif', serif;
+    /* --family: 'MYRIADPRO', sans-serif;
+        --font2: 'PT Serif', serif; */
 }
 * {
     margin: 0;
@@ -775,7 +774,9 @@ hr:after {
     align-items:center;
     justify-content:center; */
 }
- 
+.css-modal-details summary::-webkit-details-marker {
+    display: none;
+}
 /* Кнопка для открытия */
 .css-modal-details summary {
     display: inline-flex;
@@ -793,7 +794,7 @@ hr:after {
     /* background: #337AB7; */
     cursor: pointer;
     /* border: 2px solid #BFE2FF; */
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 1;   
 }
 .css-modal-details summary h1{
@@ -808,7 +809,7 @@ hr:after {
 .css-modal-details summary:focus {
     color: #fff;
 }
-/* .css-modal-details summary:before {
+/* .css-modal-details summary::before {
     content: '';
     position: absolute;
     top: 0;
@@ -821,6 +822,9 @@ hr:after {
     transform: translateX(-100%);
     z-index: -1;
 } */
+.css-modal-details summary::marker {
+    display: none;
+}
 .css-modal-details summary:hover:before,
 .css-modal-details summary:active:before,
 .css-modal-details summary:focus:before {
@@ -838,7 +842,7 @@ hr:after {
     width: 100%;
     height: 100%;
 }
- 
+
 /* Контейнер, который затемняет страницу */
 .css-modal-details details .cmc {
     display:flex;
