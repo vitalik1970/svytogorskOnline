@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 function GalleryImage({ src, onClick }) {
-  return <img src={src} alt="photographs of the landscape of Svyatogorsk and Svyatogorsk Lavra" onClick={onClick}/>;
+  return <img src={src} alt="Святогорск исторические фотографии Святогорской Лавры " onClick={onClick}/>;
 }
 
 function HistoryGallery(props) {

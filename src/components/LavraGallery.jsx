@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 function GalleryImage({ src, onClick }) {
-  return <img src={src} alt="photos of Svyatogorsk Lavra" onClick={onClick} />;
+  return <img src={src} alt="Святогорская Лавра фото" onClick={onClick} />;
 }
 
 function Gallery(props) {

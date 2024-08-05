@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 function GalleryImage({ src, onClick }) {
-  return <img src={src} alt="photos of Artem's papyatnik" onClick={onClick} />;
+  return <img src={src} alt="памятник Артема фото" onClick={onClick} />;
 }
 
 function MonumentGallery(props) {
