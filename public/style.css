@@ -863,7 +863,7 @@ hr:after {
  
 /* Модальное окно */
 .css-modal-details details .cmt {
-    /* font-family: Verdana, sans-serif;   */
+    font-family: Verdana, sans-serif;  
     font-size: 16px;
     padding: 20px;
     width:80%;
@@ -874,7 +874,7 @@ hr:after {
     border-radius: 12px;
     background: #FFF;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    text-align: center;
+    /* text-align: center; */
     overflow: auto;
 }
 .css-modal-details details[open] .cmt {

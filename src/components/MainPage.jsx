@@ -88,11 +88,11 @@ function MainPage() {
           <summary><h1>{lan ? 'TRANSPORT' : 'транспорт'}</h1></summary>
           <div className="cmc">
               <div className="cmt">
-                  <div className="width-text">Ищите не дорогое такси в городе Святогорске ?<br/> В настоящее время в городе работают несколько служб такси</div> 
+                  <div className="width-text">Ищите не дорогое такси в городе Святогорске?<br/> В настоящее время в городе работают несколько служб такси</div> 
                   <div className="width-text-905">
                   <div className="width-text">Служба такси "Своё такси 905". Набирайте короткий номер "905"</div> <img src="./img/905.png" alt="icon" className=""/> </div>
                   <div className="width-text-905">
-                  <div className="width-text">Единая служба заказа такси 3202. Набирайте короткий номер "3202"</div><img src="./img/3202.jpg" alt="icon" className=""/>  </div>
+                  <div className="width-text">Единая служба заказа такси 3202, работает только межгород. Набирайте короткий номер "3202"</div><img src="./img/3202.jpg" alt="icon" className=""/>  </div>
               </div>
           </div>
       </details>
@@ -116,11 +116,23 @@ function MainPage() {
           <summary>{lan ? 'TRANSPORT' : 'транспорт'}</summary>
           <div className="cmc">
               <div className="cmt">
-                  <div className="width-text">Ищите не дорогое такси в городе Святогорске ?<br/> В настоящее время в городе работают несколько служб такси</div> 
+                  <div className="width-text"> В настоящее время в Святогорск можно добраться социальным рейсовым АВТОБУСОМ который отправляется в 12.30 из г. Краматорск и в 13.00 из г.Славянск по четвергам<br/>(Святогорск-Славянск по вторникам временно отменён)<br/> <br/>  В остальные дни можно воспользоватся службами ТАКСИ</div> 
                   <div className="width-text-905">
-                  <div className="width-text">Служба такси "Своё такси 905". Набирайте короткий номер "905"</div> <img src="./img/905.png" alt="icon" className=""/> </div>
+                  <div className="width-text">Служба такси "Своё такси 905", короткий номер "905"</div> <img src="./img/905.png" alt="icon" className=""/> </div>
                   <div className="width-text-905">
-                  <div className="width-text">Единая служба заказа такси 3202. Набирайте короткий номер "3202"</div><img src="./img/3202.jpg" alt="icon" className=""/>  </div>
+                  <div className="width-text">Служба заказа такси 3202, работает только на межгород, короткий номер "3202"</div><img src="./img/3202.jpg" alt="icon" className=""/>  </div>
+                  <br/>
+                  <div className="width-text">Через ЖД вокзал ходит ПОЕЗД Изюм — Лиман, расписание следующее <br/>                
+                   №6901 Изюм– 5:00 Святогорск — 5:50 Лиман – 7:18<br/>
+                   №6902 Лиман – 7:35 Святогорск – 9:01 Изюм – 9:53<br/>
+                   №6903 Изюм – 13:00 Святогорск — 13:50 Лиман – 15:18<br/>
+                   №6904 Лиман – 15:40 Святогорск – 17:06 Изюм – 17:58<br/>
+              </div> 
+             
+             <div style={{marginTop: "5px", marginBottom: "5px"}}>Так сейчас выглядит железнодорожная станция Святогорск </div>
+              <img src='./img/railway.jpeg' width="500" height="500" alt='photo reilway station'/>
+              <div style={{marginTop: "5px", marginBottom: "5px"}}>Так она выглядила раньше</div>
+              <img src='./img/railway2.jpg' width="500" height="500" alt='photo reilway station'/>
               </div>
           </div>
       </details>
