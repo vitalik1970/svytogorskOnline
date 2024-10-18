@@ -5,17 +5,17 @@ function Feedback(props) {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+  // const handleNameChange = (event) => {
+  //   setName(event.target.value);
+  // };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  // };
 
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
+  // const handleMessageChange = (event) => {
+  //   setMessage(event.target.value);
+  // };
 
   // const sendFeedback = () => {
   //   const data = {
@@ -72,20 +72,20 @@ const closeFeedback = () =>{
         </div>
     </div> 
 
-    <form name="contact" method="POST" className='feedbackform'  netlify>
+    <form name="contact" method="POST" className='feedbackform' data-netlify="true">
       <p style={{color: '#fff', textAlign: 'center'}}>МЫ БУДЕМ ОЧЕНЬ ВАМ БЛАГОДАРНЫ, ЕСЛИ ВЫ ОСТАВИТЕ ОТЗЫВ О НАШЕМ САЙТЕ</p>
   <p>
-     <input type="text" name="name"placeholder="NAME*" className='feedback__form'  />
+     <input type="text" name="name" placeholder="NAME*" className='feedback__form'  />
   </p>
-  {/* <p>
+  <p>
     <label>Your Email: <input type="email" name="email" /></label>
-  </p> */}
-  {/* <p>
+  </p>
+  <p>
     <label>Your Role: <select name="role[]" multiple>
       <option value="leader">Leader</option>
       <option value="follower">Follower</option>
     </select></label>
-  </p> */}
+  </p>
   <p>
     <textarea name="message" placeholder="MESSAGE*" className='feedback__form'></textarea>
   </p>
