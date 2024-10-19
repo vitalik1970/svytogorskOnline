@@ -375,11 +375,15 @@ transform: scale(1.1);
     transform: translate(0%, -100%) rotate(.5turn);
     transition: 1s ease;
 }
+.feedbackform_wrapper {
+    margin: 0 auto;
+}
 .feedbackform {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 403px;
+    max-width: 603px;
+    margin: 0 auto;
   }
   .feedbackform:hover {  
     background-color: rgba(0, 0, 0, 0.2);

@@ -37,31 +37,6 @@
     <link rel="icon" type="image/jpg" sizes="40x40" href="/img/favicons.jpeg"/>
     <meta name="description" content="Оставить отзыв о сайте Святогорск в фотографиях">
 
-<style>
-.transparent {
-    padding: 20px 20px 0 20px;
-}
-.post-messager p {
-    color: #fff!important;
-}
-.post-content .post-message p:last-child {
-    color: #fff!important;
-}
-.reaction-items  .has-selection .counts-visible {
-  display: none;
-  opacity: 0;  
-}
-#reactions.reactions-refresh {
-    margin-bottom: 24px;
-    display: none;
-}
-.disqus {
-    max-width: 600px;
-    height: 600px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-</style>
 
     <link rel="stylesheet" href="./style.css">
   </head>
@@ -87,27 +62,29 @@
 			</div>
 		</div>
 	</header>   
-    <div style="opacity: 0; display: flex; font-size: 14px;"><h1>Svytogorsk</h1><h1>Святогорск</h1></div>
-    <div id="disqus_thread" class="disqus"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-       
-        var disqus_config = function () {
-        this.page.url = "https://svyatogorsk.online"; 
-        this.page.identifier = "svyatogorsk.html" ;
-        };
-      
-        (function() {  
-        var d = document, s = d.createElement('script');
-        s.src = 'https://svyatogorsk-online.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    <script id="dsq-count-scr" src="//svyatogorsk-online.disqus.com/count.js" async></script>
-    
+ <div class="feedbackform_wrapper">
+
+    <form name="contact" method="POST" class='feedbackform' data-netlify="true">
+        <p style="color: #fff; text-align: center">МЫ БУДЕМ ОЧЕНЬ ВАМ БЛАГОДАРНЫ, ЕСЛИ ВЫ ОСТАВИТЕ ОТЗЫВ О НАШЕМ САЙТЕ</p>
+    <p>
+       <input type="text" name="name" placeholder="NAME*" class='feedback__form'  />
+    </p>
+    <!-- <p>
+      <label>Your Email: <input type="email" name="email" /></label>
+    </p> -->
+    <!-- <p>
+      <label>Your Role: <select name="role[]" multiple>
+        <option value="leader">Leader</option>
+        <option value="follower">Follower</option>
+      </select></label>
+    </p> -->
+    <p>
+      <textarea name="message" placeholder="MESSAGE*" class='feedback__form'></textarea>
+    </p>
+    <p>
+      <button type="submit" class="button__form" >Send</button>
+    </p>
+  </form>
+</div>
+     </body>
 </html>

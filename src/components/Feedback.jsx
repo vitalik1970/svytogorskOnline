@@ -72,7 +72,7 @@ const closeFeedback = () =>{
         </div>
     </div> 
 
-    <form name="contact" method="POST" className='feedbackform' data-netlify="true">
+    {/* <form name="contact" method="POST" className='feedbackform' data-netlify="true">
       <p style={{color: '#fff', textAlign: 'center'}}>МЫ БУДЕМ ОЧЕНЬ ВАМ БЛАГОДАРНЫ, ЕСЛИ ВЫ ОСТАВИТЕ ОТЗЫВ О НАШЕМ САЙТЕ</p>
   <p>
      <input type="text" name="name" placeholder="NAME*" className='feedback__form'  />
@@ -92,7 +92,7 @@ const closeFeedback = () =>{
   <p>
     <button type="submit" className="button__form" >Send</button>
   </p>
-</form>
+</form> */}
 
 
     {/* <form id="feedbackForm" className='feedbackform' >
