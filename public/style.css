@@ -12,12 +12,17 @@
     font-weight: 400;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Kingthings_Petrock';
+    src: url("./fonts/Kingthings_Petrock.ttf")format("woff");
+    
+}
 @font-face{font-family:neutral face;font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
 @font-face{font-family:neutral face;font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
 @font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
 /* @import url('https://fonts.cdnfonts.com/css/queen-love-stories-free');
 @import url('https://fonts.cdnfonts.com/css/futura-pt'); */
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap'); */
 
 :root {
     --container-width: 1440px;
@@ -376,7 +381,9 @@ transform: scale(1.1);
     transition: 1s ease;
 }
 .feedbackform_wrapper {
-    margin: 0 auto;
+    gap: 15px;
+    display: flex;
+    padding: 15px 20px;
 }
 .feedbackform {
     padding: 10px;
@@ -398,14 +405,27 @@ transform: scale(1.1);
   
 .feedback__form {
     width: 100%;
-    color: #5e5e5e;
+    color: #fff;
     padding: 5px;
     margin-top: 5px;
     background: none;
     border-bottom: 1px solid #fff !important;
     resize: none;
     border: none;
+    font-size: 16px;
   }
+  .feedback__area {
+    font-size: 16px;
+    width: 100%;
+    color: #ddd;
+    padding: 5px;
+    margin-top: 5px;
+    background: none;
+    border-bottom: 1px solid #fff !important;
+    resize: none;
+    border: none;
+    height: 54px;
+}
   ::-webkit-input-placeholder { /* Для браузеров, основанных на WebKit, таких как Chrome и Safari */
     color: #fff; /* Цвет placeholder */
   }
@@ -424,14 +444,14 @@ transform: scale(1.1);
   .button__form {
         padding: 0 22px;
         color: #fff;
-        display: inline-block;
+        display: block;
         font-size: 13px;
         line-height: 43px;
         letter-spacing: 1.3px;
-        -webkit-border-radius: 22px;
-        border-radius: 22px;
+        /* -webkit-border-radius: 22px;
+        border-radius: 22px; */
         border: 1px solid #fff;
-        min-width: 228px;
+        width: 80%;
         -webkit-transition: all .4s;
         -o-transition: all .4s;
         transition: all .4s;
@@ -439,7 +459,7 @@ transform: scale(1.1);
         text-transform: uppercase;
         background-color: transparent;
         position: relative;
-        margin-top: 25px;
+        margin: 25px auto 0;
   }
   .button__form:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -770,167 +790,17 @@ hr:after {
         left: 100%;
     }
 }
-/* ******************   модальное окно ****************** */
-.css-modal-details {
-    display: inline-block;
-    margin-right: 25px; 
-    /* height: 60px;
-    display:flex;
-    align-items:center;
-    justify-content:center; */
-}
-.css-modal-details summary::-webkit-details-marker {
-    display: none;
-}
-/* Кнопка для открытия */
-.css-modal-details summary {
-    display: inline-flex;
-    /* margin: 10px; */
-    text-decoration: none;
-    position: relative;
-    font-size: 15px;
-    line-height: 20px;
-    /* padding: 12px 30px; */
-    color: #FFF;
-    font-family: 'Deutsch Gothic', sans-serif;
-    /* font-family: 'Queen Love Stories free', sans-serif; */
-    font-weight: 400;
-    /* text-transform: uppercase; */
-    /* background: #337AB7; */
-    cursor: pointer;
-    /* border: 2px solid #BFE2FF; */
-    /* overflow: hidden; */
-    z-index: 1;   
-}
-.css-modal-details summary h1{
-    /* font-family: 'Deutsch Gothic', sans-serif; */
-    font-family: 'Queen Love Stories free', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 1.5px
-}
-.css-modal-details summary:hover,
-.css-modal-details summary:active,
-.css-modal-details summary:focus {
-    color: #fff;
-}
-/* .css-modal-details summary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -50px;
-    bottom: 0;
-    left: 0;
-    border-right: 50px solid transparent;
-    border-top: 50px solid rgb(120, 119, 119);
-    transition: transform 0.5s;
-    transform: translateX(-100%);
-    z-index: -1;
-} */
-.css-modal-details summary::marker {
-    display: none;
-}
-.css-modal-details summary:hover:before,
-.css-modal-details summary:active:before,
-.css-modal-details summary:focus:before {
-    transform: translateX(0);
-}
- 
-/* Кнопка при открытом окне переходит на весь экран */
-.css-modal-details details[open] summary {
-    cursor: default;
-    opacity: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-}
-
-/* Контейнер, который затемняет страницу */
-.css-modal-details details .cmc {
-    display:flex;
-    align-items:center;
-    justify-content:center;    
-}
-.css-modal-details details[open] .cmc {
-    pointer-events: none;
-    z-index: 4;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    animation: bg 0.5s ease;
-    background: rgba(6, 6, 6, 0.5);
-}
- 
-/* Модальное окно */
-.css-modal-details details .cmt {
-    font-family: Verdana, sans-serif;  
-    font-size: 16px;
-    padding: 20px;
-    width:80%;
-    max-width: 800px;
-    max-height: 70%;
-    transition: 0.5s;
-    /* border: 6px solid #BFE2FF; */
-    border-radius: 12px;
-    background: #FFF;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    /* text-align: center; */
-    overflow: auto;
-}
-.css-modal-details details[open] .cmt {
-    animation: scale 0.5s ease;
-    z-index: 4;
-    pointer-events: auto;
-}
- 
-/* Декоративная кнопка с крестиком */
-.css-modal-details details[open] .cmc:after {
-    content: "";
-    width: 40px;
-    height: 40px;
-    /* border: 6px solid #BFE2FF; */
-    border-radius: 12px;
-    position: absolute;
-    z-index: 10;
-    top: 20px;
-    right: 20px;
-    /* box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2); */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23337AB7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cline x1='18' y1='6' x2='6' y2='18'%3e%3c/line%3e%3cline x1='6' y1='6' x2='18' y2='18'%3e%3c/line%3e%3c/svg%3e");
-    background-color: #FFF;
-    background-size: cover;
-    animation: move 1s ease;
-    cursor: pointer;
-}
- 
-/* Анимации */
-@keyframes scale {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-@keyframes move {
-    0% {
-        right: -80px;
-    }
-    100% {
-        right: 20px;
-    }
-}
-@keyframes bg {
-    0% {
-        background: rgba(51, 122, 183, 0);
-    }
-    100% {
-        background:  rgba(51, 122, 183, 0);
-    }
+/* ****************** transport  модальное окно ****************** */
+.transport {
+    font-family: 'Kingthings_Petrock';
+    font-size: 28px;
+} 
+.transport__bas {
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
 }
 .width-text {
     width: 100%;
@@ -941,15 +811,19 @@ hr:after {
 .transport__text {
     width: 100%;
     font-weight: 700;
-    font-size: 22px;  
+    font-size: 34px;  
+}
+.transport__text-905 {
+    font-weight: 700;
+    font-size: 39px;    
 }
 .width-text-905 {
 display: flex;
 align-items: center;
 }
-.transport__img{
-width: 40px;
-    }
+.transport__img {
+width: 50px;
+}
 /* ****************** end  модальное окно ****************** */
 /* ****************** гамбургер   ****************** */
 .hamburger-menu {
@@ -990,12 +864,13 @@ width: 40px;
     top: 56px;
     right: 0;
     width: 246px;
-    background-color: rgb(143, 140, 140);
+    /* background-color: rgb(143, 140, 140); */
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, all 0.3s ease ;
   }
   
   .menu.open {
@@ -1017,8 +892,9 @@ width: 40px;
   .menu ul li a {
     display: block;
     padding: 10px;
-    color: #333;
+    color: #fff;
     text-decoration: none;
+    font-style: italic;
   }
   .menu ul li .lng_btn {
     display: flex;
@@ -1034,6 +910,368 @@ width: 40px;
   .menu ul li a:hover {
     background-color: #f0f0f0;
   }
+
+
+
+  /* .twitfistitem {
+    max-width: 500px;
+    background: #FFFFFF;
+border: 2px solid #CECED8;
+border-radius: 40px;
+margin: 0 auto;
+
+}
+.twitfistitem__conteiner {
+    width: 360px;
+    margin: 45px 8px 30px 18px;
+}
+.text-message {
+    font-family: 'Chirp';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px; 
+   color: rgb(15, 20, 25); 
+}
+.twitfistitem__conteiner {
+
+}
+.twitfistitem__conteiner-wrapperfist::after {
+
+}
+.twitfisitemt__conteiner-foto-login {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.twitfistitem__conteiner-foto {
+
+
+}
+.twitfistitem__conteiner-foto img {
+  border-radius: 50%;
+  width: 60px;
+}
+.twitfistitem__conteiner-logo {
+    width: 40px;
+}
+.twitfistitem__conteiner-message {
+
+
+}
+.twitfistitem__conteiner-message p {
+margin-top: 14px;
+}
+.twitfistitem__conteiner-message img {
+    margin: 14px 0;
+    width: 20px;
+    height: 20px;
+}
+.twitfistitem__conteiner-like {
+}
+.twitfistitem__conteiner-fromporto {
+    font-size: 13px;
+}
+.twitfistitem__conteiner-line {
+    max-width: 335px;
+    margin: 10px 0;
+    border-bottom: 1px solid  #CECED8;;
+}
+.twitfistitem__conteiner-wrappertoo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.twitfistitem__conteiner-wrappertoo-foto {
+    position: relative;
+
+}
+.asd {
+    border-left: 2px solid #CECED8;
+    height: 318px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 5px;
+
+}
+.twitfistitem__conteiner-wrappertoo-foto img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 45px;
+}
+.text-message {
+    font-family: 'Chirp';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px; 
+   color: rgb(15, 20, 25); 
+}
+.twitfistitem__conteiner-wrappertoo-logo {
+    font-size: 14px;
+}
+.twitfistitem__conteiner-messagetoo {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.twitfistitem__conteiner-wrapperthird {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 17px;
+
+}
+.twitfistitem__conteiner-wrapperthird-foto img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 68px;
+}
+.twitfistitem__conteiner-wrapperthird-logo {
+    font-size: 14px;
+}
+.twitfistitem__conteiner-messagethird {
+    font-family: 'Chirp';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; 
+   color: rgb(15, 20, 25);
+   margin-top: 5px;
+}
+.last-block-text {
+    margin-top: 15px;
+}
+.blue {
+   background-color:  rgba(64, 106, 246, 0.2);
+
+}
+.red {
+    background-color: rgba(221, 45, 45, 0.24);
+} */
+
+/* *********************II twiter******************* */
+.twittooitem__conteiner {
+    /* margin: 10px; */
+    /* border: 1px solid #000; */
+    height: 282px;
+    border-radius: 34px;
+    /* background: #fff; */
+}
+.twittooitem__conteiner-get {
+    /* margin: 10px; */
+    /* border: 1px solid #000; */
+    height: 67vh;
+    border-radius: 34px;
+    /* background: #fff; */
+}
+.twittooitem__element {
+    height: 10px;
+    width: 182px;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: #ddd;
+    background: #000;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.twittooitem-get {
+    /* max-width: 800px; */
+    /* background: #000; */
+border: 7px solid #000;
+border-radius: 45px;
+margin: 0 auto;
+background-color: rgba(0, 0, 0, 0.2);
+}
+.twittooitem {
+    /* max-width: 500px; */
+    /* background: #000; */
+border: 7px solid rgb(42, 42, 42);
+border-radius: 45px;
+margin: 0 auto;
+background-color: rgba(0, 0, 0, 0.2);
+}
+.twittooitem__conteiner-wrappertoo-stela img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    /* bottom: 42px; */
+    height: 50px;
+}
+.twitfistitem__conteiner-wrappertoo-logo {
+    color: #ddd;
+    font-size: 15px;
+    font-family: 'Arial', sans-serif ;
+
+}
+.twittooitem__conteiner-wrappertoo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+.sending_message {
+    max-width: 38vw;
+}
+.twitfistitem__conteiner-messagetoo {
+    max-width: 60vw;
+   padding: 0 15px; 
+   font-family: 'Arial', sans-serif ;
+}
+.twitfistitem__conteiner-messagetoo li{
+  color: #ffffff;
+font-size: 16px;
+border-bottom: 1px solid #fff;
+border-top: 1px solid #fff; 
+margin-bottom: 5px;
+}
+
+
+.founder__btn_heder {
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #dee0e1;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 8px 5px 7px 8px;
+   }
+   .founder__btn_heder:hover {
+       background:  #dee0e1;
+      }
+      .founder__btn_footer:hover  {
+       background:  #dee0e1;
+      }
+   .founder__btn {
+       display: flex;
+       align-items: center;
+       margin-top: 17px; 
+   }
+   .founder__reboot {
+       margin-left: 30px;
+       cursor: pointer;
+       display: flex;
+   }
+   .founder__btn_footer {
+       cursor: pointer;
+       background: #fff;
+       border: 1px solid #dee0e1;
+       border-bottom-right-radius: 20px;
+       border-top-right-radius: 20px;
+       padding: 5px 9px 6px 5px;   
+   }
+   .founder__comments {
+    font-family: 'Arial', sans-serif;
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    color: #fff;
+    padding: 6px 9px; 
+    align-items: center;
+   }
+   .founder__comments:hover {
+       background: rgba(255, 255, 255, 0.627);
+   
+       border-radius: 20px;
+      }
+
+
+/* .twittooitem__conteiner-wrapperthird2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.twittooitem__conteiner-wrapperthird-foto2 img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 29px;
+} */
+/* .twittooitem__conteiner-wrappertoo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} */
+/* .twitfistitem__conteiner-wrappertoo2 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 14px;
+} */
+/* .asd2 {
+    border-left: 2px solid #CECED8;
+    height: 781px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 7px;
+} */
+/* .twittooitem__conteiner-wrappertoo-foto1 {
+    position: relative;
+} */
+/* .twittooitem__conteiner-wrapperthird-foto3 img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 77px;
+}
+.twittooitem__conteiner-wrapperthird-foto4 img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 44px;
+} */
+/* .twittooitem__conteiner-wrapperthird-foto5 img {
+    border-radius: 50%;
+    width: 50px;
+    position: relative;
+    bottom: 47px;
+} */
+/* .features__box-right {
+    background-image: url(/public/images/v2/svg/twitvec2.svg);
+    width: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+/* .happy__box {
+
+} */
+/* .happy__box-left {
+    background-image: url(/public/images/v2/svg/twitvec3.png);
+    width: 650px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+/* .asd3 {
+    border-left: 2px solid #CECED8;
+    height: 266px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 8px;
+} */
+/* .twittooitem3 {
+    width: 400px;
+    background: #FFFFFF;
+    border: 2px solid #CECED8;
+    border-radius: 40px;
+    margin: 50px auto;
+} */
+/* .new-title {
+    list-style-type: none;
+    font-size: calc(var(--body) * 1.1);
+    font-family: 'Helvetica Neue';
+    padding: 18px 0;
+    font-weight: 400;
+    line-height: 150%;
+    color: #242527;
+} */
   @media (max-width: 800px){
     .hamburger-menu {
      display: block;
@@ -1054,11 +1292,21 @@ width: 40px;
     .menu {
         right: 0;
     }
+    .feedbackform_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sending_message {
+         max-width: 100%; 
+    }
+    .twitfistitem__conteiner-messagetoo {
+        max-width: 100%;
+    }
       }   
   @media (max-width: 480px){
   .hamburger {
-    width: 20px;
-    height: 17px;
+    width: 22px;
+    height: 22px;
   }
   .hamburger .bar {
     height: 2px;
