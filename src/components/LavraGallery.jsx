@@ -40,7 +40,7 @@ function Gallery(props) {
     setModalOpen(true);
   };
   const images = [
-    './img/land/land.jpeg',
+    './img/land/land.jpg',
     './img/land/land1.jpg',
     './img/land/land2.jpeg',
     './img/land/land3.jpeg',
@@ -51,6 +51,7 @@ function Gallery(props) {
     './img/land/land8.jpg',
     './img/land/land9.jpg',
     './img/land/land10.jpg',
+    
   ];
   
 
@@ -67,7 +68,9 @@ function Gallery(props) {
            {isModalOpen ? <img src="./img/next-icon.png" alt="icon" className="nex-img"/> : '' }  
           </div>
           </div>          
-            <img src={selectedImage} className="modal-content-img" alt="" />
+            <img src={selectedImage} 
+           className={`modal-content-img ${isModalOpen ? 'h-100vh' : ''}`}/>
+            
           </div>
        
       <div className="gallery__landscape" style={{ display: props.isGalleryOpenLaurel  ? 'block' : 'none' }}>

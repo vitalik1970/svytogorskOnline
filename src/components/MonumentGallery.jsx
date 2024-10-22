@@ -62,7 +62,8 @@ function MonumentGallery(props) {
            {isModalOpen ? <img src="./img/next-icon.png" alt="icon" className="nex-img"/> : '' }  
           </div>
           </div>          
-            <img src={selectedImage} alt="" />
+            <img src={selectedImage} 
+            className={`modal-content-img ${isModalOpen ? 'h-100vh' : ''}`}/>
           </div>
        
       <div className="gallery__artem" style={{ display: props.isGalleryOpenMonument  ? 'block' : 'none' }}>

@@ -66,12 +66,56 @@
     right: 45px;
     z-index: -1;
   }
+ 
+    .feedback-message {
+      position: fixed;
+      bottom: 20px;
+      font-size: 16px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      display: none; /* По умолчанию скрыто */
+      z-index: 1000;
+    }
 
+    .feedback-message a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .feedback-message a:hover {
+      text-decoration: underline;
+    }
+
+    .close-message {
+      cursor: pointer;
+      margin-left: 10px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 16px;
+    }
+  </style>
     </style>
   </head>
   <body>
     <div id="root"></div>
-  
+    <div class="feedback-message" id="feedbackMessage">
+      Оставьте пожалуйста <a href="/disqus.html">отзыв о сайте</a>
+      <span class="close-message" onclick="closeMessage()">[Закрыть]</span>
+      <script>
+        // Функция для показа сообщения через 10 секунд
+        setTimeout(function() {
+          document.getElementById('feedbackMessage').style.display = 'block';
+        }, 10000); // 10000 миллисекунд = 10 секунд
+    
+        // Функция для закрытия сообщения
+        function closeMessage() {
+          document.getElementById('feedbackMessage').style.display = 'none';
+        }
+      </script>
+    </div>
     
   </div>
   <!-- <div id="SinoptikInformer" style="width:224px;" class="SinoptikInformer type1c1"><div class="siHeader"><div class="siLh"><div class="siMh">

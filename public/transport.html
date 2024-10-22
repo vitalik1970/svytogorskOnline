@@ -54,6 +54,9 @@
    
 
 }
+h1 a{
+    font-size: clamp(1.625rem, 0.925rem + 2.8vw, 3.375rem);
+}
     </style>
    
   </head>
@@ -62,7 +65,7 @@
 		<div class="container">
 			<div class="header__top">
             	
-      <div class="logo"><h1><a href="./index.html">СВЯТОГОРСК.ФОТО</a></h1></div>
+      <div class="logo"><h1><a style="font-family: Kingthings Petrock" href="./index.html">Как добраться в Святогорск?</a></h1></div>
       <div class="lng_btn ">
         <a href="./purpose_project.html" class="nav-list__link" >EN</a>
         <a class="nav-list__link--active" href="#">RU</a>
@@ -80,14 +83,19 @@
 	</header> 
     <div class="bone" >  
     
-    <h1 style="font-family: Kingthings Petrock">Как добраться в Святогорск!</h1>
+    <!-- <h1 style="font-family: Kingthings Petrock">Как добраться в Святогорск!</h1> -->
    
-    <div class="transport">    
-    Первый и самый дешёвый способ это автобус, типа маршрутка!<br>
-                <div class="transport__bas">
-                    
+    <div class="transport"> 
+        <div class="transport__tx-hed">
+      Первый и самый дешёвый способ это автобус, типа маршрутка!   
+           </div>    
+                <div class="transport__bas1">
+                    <div class="transport__bas1-text">Так выглядела наша автостация</div>
+              <div class="transport__bas1-in">     
                 <div>
-                    В Святогорск
+                    <div class="transport__tx">
+                         В Святогорск
+                       </div> 
                     <table border="1" style="border-collapse: collapse; width: 100%;">
                         <thead>
                           <tr>
@@ -106,7 +114,9 @@
                       </table>
                     </div>
                     <div>
-                      Второй рейс
+                        <div class="transport__tx">
+                           Второй рейс
+                           </div> 
                       <table border="1" style="border-collapse: collapse; width: 100%;">
                         <thead>
                           <tr>
@@ -124,11 +134,14 @@
                         </tbody>
                       </table>
                     </div>  
+                </div> 
                 </div>
-                <div class="transport__bas">
-                    
+                <div class="transport__bas2">
+                    <div class="transport__bas1-for"> 
                     <div>
-                        Из Святогорска
+                        <div class="transport__tx">
+                            Из Святогорска
+                           </div> 
                         <table border="1" style="border-collapse: collapse; width: 100%;">
                             <thead>
                               <tr>
@@ -147,7 +160,9 @@
                           </table>
                         </div>
                         <div>
-                          Второй рейс
+                            <div class="transport__tx">
+                               Второй рейс
+                              </div> 
                           <table border="1" style="border-collapse: collapse; width: 100%;">
                             <thead>
                               <tr>
@@ -164,19 +179,22 @@
                               </tr>
                             </tbody>
                           </table>
-                        </div>  
+                          <div class="transport__tx">
+                          Стоимость проезда Краматорск-Святогорск 150 грн. <br>
+                          Телефон для справок:  (050) 273-83-27</div>
+                        </div> 
+                    </div>  
                     </div>
-                 Стоимость проезда Краматорск-Святогорск 150 грн. <br>
-                    Телефон для справок:  (050) 273-83-27 <br>
-                    Отправка автобуса от Укрпочты, на фото.
+               
+                    <!-- Отправка автобуса от Укрпочты, на фото.
                     <br>
                     <img src="/img/transport/ukr.png" alt="photo ukrposhta">
-                    <br>
-                    Так выглядел наш автовокзал, фронт
+                    <br> -->
+                    <!-- Так выглядел наш автовокзал, фронт
                     <img src="/img/transport/avtovok-front.png" alt="photo avtovokzal front">
                     Перон
                     <img src="/img/transport/svyatogorsk-avtos.jpg" alt="photo avtovokzal">
-                    <br>
+                    <br> -->
                     <div class="transport__text-905">А так же возможно воспользоватся такси</div> 
                     <div class="width-text-905">
                    
@@ -186,9 +204,10 @@
                     <!-- <div class="width-text-905">
                     <div class="transport__text">Служба заказа такси 3202, работает только на межгород, короткий номер "3202"</div><img src="././img/3202.jpg" alt="icon" class="transport__img"/>  </div> -->
                   
-                    <div style="margin-top: 15px;" class="transport__text">Через ЖД вокзал проходит поезд Изюм — Лиман
-                        <div class="transport__bas">
-                    
+                    <div style="margin-top: 15px;" class="transport__text">Через ЖД вокзал проходит дизель єлектропоезд Изюм — Лиман
+                        <div class="transport__rel1">
+                            <div class="transport__rel1-in"> 
+                                Так раньше выглядел  железнодорожный вокзал Святогорска 
                             <div>
                         <table border="1" style="border-collapse: collapse; width: 100%;">
                             <thead>
@@ -206,7 +225,8 @@
                               </tr>
                             </tbody>
                           </table>
-                          </div>   
+                          </div> 
+                            
                           <div>
                             <table border="1" style="border-collapse: collapse; width: 100%;">
                                 <thead>
@@ -226,8 +246,10 @@
                               </table>
                               </div> 
                             </div> 
-                            <div class="transport__bas">
-                    
+                            </div>
+                            <div class="transport__rel2">
+                                <div class="transport__rel2-for">
+                                    Это перон 
                                 <div>
                             <table border="1" style="border-collapse: collapse; width: 100%;">
                                 <thead>
@@ -264,15 +286,25 @@
                                     </tbody>
                                   </table>
                                   </div> 
+                                  <div class="transport__tx">
+                                     В расписании возможны изменения, уточняйте!
+                                  </div>
+                                 
                                 </div>
-                     В расписании возможны измеения, уточняйте!
+                            </div>
+                    
                 </div> 
-               
-               <div style='margin-top: 5px; margin-bottom: 5px'>Так сейчас выглядит железнодорожная станция Святогорск </div>
-                <img src='./img/transport/railway.jpeg' width="500" height="500" alt='photo reilway station'/>
-                <div style='margin-top: 5px; margin-bottom: 5px'>Так она выглядила раньше</div>
+                <div style='margin-top: 5px; margin-bottom: 10px' class="transport__rel3">
+                    <div class="transport__rel3-text">
+                      Так сейчас выглядит железнодорожная станция Святогорск
+                    <div>
+                    
+                </div>
+               <!-- <div >Так сейчас выглядит железнодорожная станция Святогорск </div>
+                <img src='./img/transport/railway.jpeg' width="500" height="500" alt='photo reilway station'/> -->
+                <!-- <div style='margin-top: 5px; margin-bottom: 5px'>Так она выглядила раньше</div>
                 <img src='./img/transport/railway2.jpg' width="500" height="500" alt='photo reilway station'/>
-                <img src='./img/transport/svyatogorsk-rel-per.jpg' width="500" height="500" alt='photo reilway station'/>
+                <img src='./img/transport/svyatogorsk-rel-per.jpg' width="500" height="500" alt='photo reilway station'/> -->
               
           
    

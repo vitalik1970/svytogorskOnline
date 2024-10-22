@@ -71,6 +71,11 @@ const closeFeedback = () =>{
                     <p><a style={{color: "#fff"}} href="tel:+380953945157">+38 (095) 394-51-57</a></p>
         </div>
     </div> 
+    <div className='feedback__link'>
+      Мы будем очень благоданы любому вашему участию в развитии нашего проекта, будь это оставленный <a style={{textDecoration: "underline", color: "blue"}} href='/disqus.html'>отзыв</a>, пожелание, предложение, скинутая ссылка друзьям, а так же любая финансовая помощь!<br/><br/>
+      Так же, проим вас посетить сайт наших партнёров, которые занимаются продажей готовых сайтов, там есть очень интересные предложеия! Кликните здесь <a className='feedback__link-a' href='https://ready-site.vercel.app' >https://ready-site.vercel.app</a>
+
+      </div> 
 
     {/* <form name="contact" method="POST" className='feedbackform' data-netlify="true">
       <p style={{color: '#fff', textAlign: 'center'}}>МЫ БУДЕМ ОЧЕНЬ ВАМ БЛАГОДАРНЫ, ЕСЛИ ВЫ ОСТАВИТЕ ОТЗЫВ О НАШЕМ САЙТЕ</p>

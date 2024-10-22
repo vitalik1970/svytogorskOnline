@@ -178,13 +178,21 @@ filter: brightness(2) grayscale(1) opacity(0.5);
   } */
 /* ****************  галереии ************************* */
 .modal-content {
-max-width: 1350px;
+max-width: 100%;
     margin: 0 auto;
     position: relative;
 }
 .modal-content-img{
-width: 100%;
-max-height: 750px;
+
+max-height: 750px; 
+
+object-fit: cover;          
+object-position: center;    
+width: 100vw;               
+ /* height: 100%; */
+}
+.h-100vh {
+    height: 100vh;
 }
 .modal-overlay {
     position: relative;
@@ -496,6 +504,7 @@ transform: scale(1.1);
 color: #fff;
 margin-top: 20px;
 font-family: 'Futura PT', sans-serif;
+background-color: rgba(0, 0, 0, 0.2);
 }
 .feedback__contact:hover {
     background-color: rgba(0, 0, 0, 0.2);
@@ -739,9 +748,9 @@ margin-bottom: 15px;
     .nav h2 {
         font-size: 15px;   
     }
-    .main__wrapper {
+    /* .main__wrapper {
         padding: 0 15px;
-    }
+    } */
     .transparent {
         padding: 0 10px;
     }
@@ -755,7 +764,7 @@ margin-bottom: 15px;
 .purpose-p {
 font-family: Arial, sans-serif; 
 line-height: 1.35;
-font-size: 20px;
+font-size: clamp(0.875rem, 0.665rem + 0.81vw, 1.375rem);
 }
 .purpose-h1 {
  opacity: 0; 
@@ -796,11 +805,121 @@ hr:after {
     font-size: 28px;
 } 
 .transport__bas {
+  
+    
     margin: 7px 0;
     display: flex;
     gap: 20px;
     font-family: 'Helvetica Neue';
     font-size: 20px;
+}
+.transport__bas1 {
+    background-image: url('/img/transport/avtovok-front.png');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    height: 90vh;
+}
+.transport__rel1 {
+    background-image: url('/img/transport/railway2.jpg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    height: 90vh;
+}
+.transport__rel2 {
+    background-image: url('/img/transport/svyatogorsk-rel-per.jpg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    height: 90vh;
+}
+.transport__bas2 {
+    background-image: url('/img/transport/svyatogorsk-avtos.jpg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    height: 90vh;
+}
+.transport__rel3 {
+    background-image: url('/img/transport/railway.jpeg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 7px 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    height: 90vh;   
+}
+.transport__bas1-in {
+position: absolute;
+left: 20px;
+bottom: 20px;
+max-width: 520px;
+height:auto;
+
+}
+.transport__rel1-in {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    max-width: 550px;
+    height:auto;
+}
+.transport__rel2-for {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    max-width: 550px;
+    height:auto;
+}
+.transport__bas1-for {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    max-width: 520px;
+    height:auto;   
+}
+.transport__bas1-text {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50%;
+    height:auto;    
+}
+.transport__rel3-text {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 50%;
+        
 }
 .width-text {
     width: 100%;
@@ -815,7 +934,7 @@ hr:after {
 }
 .transport__text-905 {
     font-weight: 700;
-    font-size: 39px;    
+    font-size: clamp(1.313rem, 0.919rem + 1.52vw, 2.25rem);    
 }
 .width-text-905 {
 display: flex;
@@ -823,6 +942,10 @@ align-items: center;
 }
 .transport__img {
 width: 50px;
+}
+.transport__tx-hed {
+font-size: clamp(1.375rem, 1.025rem + 1.4vw, 2.25rem);
+
 }
 /* ****************** end  модальное окно ****************** */
 /* ****************** гамбургер   ****************** */
@@ -911,144 +1034,6 @@ width: 50px;
     background-color: #f0f0f0;
   }
 
-
-
-  /* .twitfistitem {
-    max-width: 500px;
-    background: #FFFFFF;
-border: 2px solid #CECED8;
-border-radius: 40px;
-margin: 0 auto;
-
-}
-.twitfistitem__conteiner {
-    width: 360px;
-    margin: 45px 8px 30px 18px;
-}
-.text-message {
-    font-family: 'Chirp';
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px; 
-   color: rgb(15, 20, 25); 
-}
-.twitfistitem__conteiner {
-
-}
-.twitfistitem__conteiner-wrapperfist::after {
-
-}
-.twitfisitemt__conteiner-foto-login {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-}
-.twitfistitem__conteiner-foto {
-
-
-}
-.twitfistitem__conteiner-foto img {
-  border-radius: 50%;
-  width: 60px;
-}
-.twitfistitem__conteiner-logo {
-    width: 40px;
-}
-.twitfistitem__conteiner-message {
-
-
-}
-.twitfistitem__conteiner-message p {
-margin-top: 14px;
-}
-.twitfistitem__conteiner-message img {
-    margin: 14px 0;
-    width: 20px;
-    height: 20px;
-}
-.twitfistitem__conteiner-like {
-}
-.twitfistitem__conteiner-fromporto {
-    font-size: 13px;
-}
-.twitfistitem__conteiner-line {
-    max-width: 335px;
-    margin: 10px 0;
-    border-bottom: 1px solid  #CECED8;;
-}
-.twitfistitem__conteiner-wrappertoo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.twitfistitem__conteiner-wrappertoo-foto {
-    position: relative;
-
-}
-.asd {
-    border-left: 2px solid #CECED8;
-    height: 318px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 5px;
-
-}
-.twitfistitem__conteiner-wrappertoo-foto img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 45px;
-}
-.text-message {
-    font-family: 'Chirp';
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px; 
-   color: rgb(15, 20, 25); 
-}
-.twitfistitem__conteiner-wrappertoo-logo {
-    font-size: 14px;
-}
-.twitfistitem__conteiner-messagetoo {
-    font-size: 14px;
-    margin-top: 5px;
-}
-.twitfistitem__conteiner-wrapperthird {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 17px;
-
-}
-.twitfistitem__conteiner-wrapperthird-foto img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 68px;
-}
-.twitfistitem__conteiner-wrapperthird-logo {
-    font-size: 14px;
-}
-.twitfistitem__conteiner-messagethird {
-    font-family: 'Chirp';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px; 
-   color: rgb(15, 20, 25);
-   margin-top: 5px;
-}
-.last-block-text {
-    margin-top: 15px;
-}
-.blue {
-   background-color:  rgba(64, 106, 246, 0.2);
-
-}
-.red {
-    background-color: rgba(221, 45, 45, 0.24);
-} */
 
 /* *********************II twiter******************* */
 .twittooitem__conteiner {
@@ -1176,102 +1161,155 @@ margin-bottom: 5px;
    
        border-radius: 20px;
       }
-
-
-/* .twittooitem__conteiner-wrapperthird2 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-.twittooitem__conteiner-wrapperthird-foto2 img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 29px;
-} */
-/* .twittooitem__conteiner-wrappertoo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-} */
-/* .twitfistitem__conteiner-wrappertoo2 {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 14px;
-} */
-/* .asd2 {
-    border-left: 2px solid #CECED8;
-    height: 781px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 7px;
-} */
-/* .twittooitem__conteiner-wrappertoo-foto1 {
-    position: relative;
-} */
-/* .twittooitem__conteiner-wrapperthird-foto3 img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 77px;
-}
-.twittooitem__conteiner-wrapperthird-foto4 img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 44px;
-} */
-/* .twittooitem__conteiner-wrapperthird-foto5 img {
-    border-radius: 50%;
-    width: 50px;
-    position: relative;
-    bottom: 47px;
-} */
-/* .features__box-right {
-    background-image: url(/public/images/v2/svg/twitvec2.svg);
-    width: 550px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-} */
-/* .happy__box {
-
-} */
-/* .happy__box-left {
-    background-image: url(/public/images/v2/svg/twitvec3.png);
-    width: 650px;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-} */
-/* .asd3 {
-    border-left: 2px solid #CECED8;
-    height: 266px;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 8px;
-} */
-/* .twittooitem3 {
-    width: 400px;
-    background: #FFFFFF;
-    border: 2px solid #CECED8;
-    border-radius: 40px;
-    margin: 50px auto;
-} */
-/* .new-title {
-    list-style-type: none;
-    font-size: calc(var(--body) * 1.1);
-    font-family: 'Helvetica Neue';
-    padding: 18px 0;
-    font-weight: 400;
-    line-height: 150%;
-    color: #242527;
-} */
+      .project1 {
+        background-image: url('/img/project/forest.jpg');
+        /* background-image: url('/img/project/slav2.png'); */
+        background-position: center top; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+         margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project1__text1 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .project2 {
+        background-image: url('/img/project/orlenok-Svyatogorsk.jpg');
+        background-position: center top; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        font-family: 'Helvetica Neue';
+        margin-bottom: 20px;
+        height: 100vh;
+      }
+      .project2__text2 {
+        position: absolute;
+        left: 20px;
+       bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .project3 {
+        background-image: url('/img/project/lager.jpg');
+        background-position: center top; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project3__text3 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .project4 {
+        background-image: url('/img/project/shahter.jpg');
+        background-position: center center; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project4__text4 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .project5 {
+        background-image: url('/img/project/lechebniza.jpg');
+        background-position: right bottom; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project5__text5 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .project6 {
+        background-image: url('/img/project/most.png');
+        background-position: left  center; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project6__text6 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .project7 {
+        background-image: url('/img/project/float-svyt.jpg');
+        background-position: center top; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project7__text7 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .project8 {
+        background-image: url('/img/project/shokoladjpg.jpg');
+        background-position: center center; /* x y */
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-bottom: 20px;
+        font-family: 'Helvetica Neue';
+        height: 100vh;
+      }
+      .project8__text8 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 0 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .feedback__link {
+        max-width: 38vw;
+        padding: 20px;
+        margin-top: 15px;
+        color: #fff;
+        font-family: 'Helvetica Neue';
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      .feedback__link-a{
+        color: #fff;
+        font-family: 'Helvetica Neue';
+      } 
   @media (max-width: 800px){
     .hamburger-menu {
      display: block;
@@ -1302,6 +1340,25 @@ margin-bottom: 5px;
     .twitfistitem__conteiner-messagetoo {
         max-width: 100%;
     }
+    th, td {
+        padding: 0;
+       font-size: 14px;
+      }
+      .transport__rel2-for {
+      left: 0;
+    }
+    .transport__bas1-in {
+        left: 0;
+    }
+    .transport__rel1-in {
+        left: 0px;
+    }
+    .transport__bas1-for {
+        left: 0px;
+    } 
+    .feedback__link {
+        max-width: 79vw;
+    }
       }   
   @media (max-width: 480px){
   .hamburger {
@@ -1311,11 +1368,23 @@ margin-bottom: 5px;
   .hamburger .bar {
     height: 2px;
   }
-  .css-modal-details details[open] .cmc {
-    left: -205px;
-   width: 100vw;
-   height: 100vh;
+ 
+.width-text-905 {
+    font-size: 21px;
 }
+.transport__rel3-text {
+    font-size: 16px;
+}
+.transport__tx {
+    font-size: 16px;  
+}
+.transport__rel1-in {
+    font-size: 16px; 
+}
+.transport__text {
+    font-size: 25px;
+}
+
 }
 @media (max-width: 430px) {
     .css-modal-details details[open] .cmc {
