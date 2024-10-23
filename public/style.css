@@ -713,9 +713,9 @@ margin-bottom: 15px;
         flex-direction: column;
         align-items: center;
     }
-    .logo h1 {
+    /* .logo h1 {
         font-size: 30px;
-    }
+    } */
     .foto__stella {
         display: none;
 }
@@ -725,9 +725,9 @@ margin-bottom: 15px;
  .transparent {
     padding: 0 25px;
 }
-.logo h1 {
+/* .logo h1 {
     font-size: 25px;
-}
+} */
 .lng_btn {
     font-size: 15px;
 }
@@ -802,87 +802,60 @@ hr:after {
 /* ****************** transport  модальное окно ****************** */
 .transport {
     font-family: 'Kingthings_Petrock';
-    font-size: 28px;
+    /* font-size: 28px; */
 } 
-.transport__bas {
+.bone__transport {
+    width: 100%;
+    font-family: 'Kingthings_Petrock';
+    margin: 0 auto;
   
-    
+    color: #fff;
+}
+.transport__bas {
     margin: 7px 0;
     display: flex;
     gap: 20px;
     font-family: 'Helvetica Neue';
     font-size: 20px;
 }
-.transport__bas1 {
-    background-image: url('/img/transport/avtovok-front.png');
+.transport__ {
     background-position: center center; /* x y */
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    margin: 7px 0;
-    display: flex;
-    gap: 20px;
+    margin: 15px 0;
     font-family: 'Helvetica Neue';
-    font-size: 20px;
     height: 90vh;
+}
+
+.transport__bas1 {
+    background-image: url('/img/transport/avtovok-front.png');
+  
 }
 .transport__rel1 {
     background-image: url('/img/transport/railway2.jpg');
-    background-position: center center; /* x y */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 7px 0;
-    display: flex;
-    gap: 20px;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    height: 90vh;
+   
 }
 .transport__rel2 {
     background-image: url('/img/transport/svyatogorsk-rel-per.jpg');
-    background-position: center center; /* x y */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 7px 0;
-    display: flex;
-    gap: 20px;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    height: 90vh;
+
 }
 .transport__bas2 {
     background-image: url('/img/transport/svyatogorsk-avtos.jpg');
-    background-position: center center; /* x y */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 7px 0;
-    display: flex;
-    gap: 20px;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    height: 90vh;
+ 
+}
+.transport__bas3 {
+    background-image: url('/img/transport/ukr.png');  
 }
 .transport__rel3 {
     background-image: url('/img/transport/railway.jpeg');
-    background-position: center center; /* x y */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin: 7px 0;
-    display: flex;
-    gap: 20px;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    height: 90vh;   
+    
 }
 .transport__bas1-in {
 position: absolute;
 left: 20px;
 bottom: 20px;
-max-width: 520px;
+max-width: 624px;
 height:auto;
 
 }
@@ -890,21 +863,21 @@ height:auto;
     position: absolute;
     left: 20px;
     top: 20px;
-    max-width: 550px;
+    max-width: 730px;
     height:auto;
 }
 .transport__rel2-for {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    max-width: 550px;
+    max-width: 730px;
     height:auto;
 }
 .transport__bas1-for {
     position: absolute;
     left: 20px;
     top: 20px;
-    max-width: 520px;
+    max-width: 640px;
     height:auto;   
 }
 .transport__bas1-text {
@@ -921,31 +894,45 @@ height:auto;
     width: 50%;
         
 }
+.transport__logo-h-a{
+    font-size: clamp(1.625rem, 0.925rem + 2.8vw, 3.375rem)!important;
+    font-family: "Kingthings Petrock"!important;
+    color: #fff;
+}
 .width-text {
-    width: 100%;
     font-weight: 700;
     font-size: 22px;
     color: #0000007a;
 }
 .transport__text {
-    width: 100%;
     font-weight: 700;
-    font-size: 34px;  
+    font-size: 34px;
+    margin-left: 20px;  
 }
 .transport__text-905 {
     font-weight: 700;
-    font-size: clamp(1.313rem, 0.919rem + 1.52vw, 2.25rem);    
+    font-size: clamp(1.313rem, 0.919rem + 1.52vw, 2.25rem); 
+    margin-left: 20px;   
 }
 .width-text-905 {
 display: flex;
 align-items: center;
+}
+.width-text-905 p {
+   font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.75rem);
+     margin: 0 20px;
 }
 .transport__img {
 width: 50px;
 }
 .transport__tx-hed {
 font-size: clamp(1.375rem, 1.025rem + 1.4vw, 2.25rem);
-
+padding: 0 20px;
+}
+.transport__tx {
+font-size: clamp(1rem, 0.7rem + 1.2vw, 1.75rem);
+padding: 20px;
+font-family: "Kingthings_Petrock",  sans-serif;;
 }
 /* ****************** end  модальное окно ****************** */
 /* ****************** гамбургер   ****************** */
@@ -1161,10 +1148,15 @@ margin-bottom: 5px;
    
        border-radius: 20px;
       }
+    .bone__project {
+        color: #fff;
+    }  
       .project1 {
         background-image: url('/img/project/forest.jpg');
         /* background-image: url('/img/project/slav2.png'); */
-        background-position: center top; /* x y */
+      }
+    .project {
+        background-position: center center ; /* x y */
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -1172,7 +1164,7 @@ margin-bottom: 5px;
         font-family: 'Helvetica Neue';
         height: 100vh;
       }
-      .project1__text1 {
+      .project__text {
         position: absolute;
         left: 20px;
         bottom: 20px;
@@ -1181,122 +1173,38 @@ margin-bottom: 5px;
       }
       .project2 {
         background-image: url('/img/project/orlenok-Svyatogorsk.jpg');
-        background-position: center top; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        font-family: 'Helvetica Neue';
-        margin-bottom: 20px;
-        height: 100vh;
       }
-      .project2__text2 {
-        position: absolute;
-        left: 20px;
-       bottom: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+    
       .project3 {
         background-image: url('/img/project/lager.jpg');
-        background-position: center top; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
       }
-      .project3__text3 {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
+     
       .project4 {
         background-image: url('/img/project/shahter.jpg');
-        background-position: center center; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
       }
-      .project4__text4 {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
+    
       .project5 {
         background-image: url('/img/project/lechebniza.jpg');
-        background-position: right bottom; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
       }
-      .project5__text5 {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+     
       .project6 {
         background-image: url('/img/project/most.png');
-        background-position: left  center; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
       }
-      .project6__text6 {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.3);
-      }
+     
       .project7 {
         background-image: url('/img/project/float-svyt.jpg');
-        background-position: center top; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
+        background-position: center top!important; 
       }
-      .project7__text7 {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.2);
-      }
+    
       .project8 {
         background-image: url('/img/project/shokoladjpg.jpg');
-        background-position: center center; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        margin-bottom: 20px;
-        font-family: 'Helvetica Neue';
-        height: 100vh;
       }
-      .project8__text8 {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        padding: 0 15px;
-        background-color: rgba(0, 0, 0, 0.3);
+   
+      .project__h1 {
+        font-family: 'Kingthings_Petrock';
+        font-size: clamp(1.5rem, 0.85rem + 2.6vw, 3.125rem);
+        color: #fff;
+        padding-left: 20px;
       }
       .feedback__link {
         max-width: 38vw;
@@ -1370,20 +1278,24 @@ margin-bottom: 5px;
   }
  
 .width-text-905 {
-    font-size: 21px;
+    font-size: 20px;
 }
 .transport__rel3-text {
     font-size: 16px;
 }
-.transport__tx {
-    font-size: 16px;  
-}
+
 .transport__rel1-in {
     font-size: 16px; 
 }
 .transport__text {
-    font-size: 25px;
+    font-size: 20px;
 }
+.project {
+    height: 50vh;
+  }
+  .transport__ {
+    height: 50vh;
+  }  
 
 }
 @media (max-width: 430px) {
