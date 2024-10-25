@@ -1,12 +1,12 @@
 import './App.css';
 import MainPage from './components/MainPage';
-import CookieConsent from './CookieConsent';
+import LeaveReview from './ LeaveReview'
 
 
 function App() {
   return (
     <>
-   <CookieConsent/>
+   <LeaveReview/>
    <MainPage/>
    </>
   );

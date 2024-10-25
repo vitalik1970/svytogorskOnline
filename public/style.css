@@ -115,13 +115,12 @@ svg {
     display: inline-block;
     position: relative;
     line-height: 27px;
-    margin-right: 25px;
-    font-family: 'Deutsch Gothic', sans-serif;
+    margin-right: 25px; 
 }
 .head_menu>ul>li a {
     color: #fff;
-    font-size: 15px;
-    letter-spacing: 1.1px!important;
+    font-size: clamp(0.813rem, -0.271rem + 2.17vw, 1.625rem);
+    font-family: "Kingthings_Petrock", sans-serif;
     cursor: pointer;
 }
 .logo {
