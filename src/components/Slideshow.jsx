@@ -5,7 +5,7 @@ const SlideShow = () => {
   const allImages = [
     "./img/slav.jpg",
     "/img/slav1.png",
-    // "/img/slav2.png",
+   "/img/slav13.jpg",
     "/img/slav3.jpg",
     "/img/slav4.png",
     "/img/slav5.jpg",

@@ -65,6 +65,7 @@ const closeFeedback = () =>{
                     <li className="social__item"><a  href="https://twitter.com/YcenkoVitalij"><span class="social__item-x"></span></a></li>
                     <li className="social__item"><a href="https://github.com/vitalik1970?tab=repositories"><img src="./img/icons/gitHub.svg" alt="Link"/></a></li>
                     <li className="social__item"><a href="https://www.linkedin.com/in/vitaliy-yatsenko-5806b5226/"><img src="./img/icons/linkedIn.svg" alt="Link"/></a></li>
+                    <li className="social__item"><a href="https://t.me/svytogorsk.online"><img src="./img/icons/telegram.svg" alt="Link"/></a></li>
                 </ul>
                 <div className="copyright">
                     <p> <a href="mailto:ytcenko1970@gmail.com" style={{color: "#fff"}}>ytcenko1970@gmail.com</a></p>

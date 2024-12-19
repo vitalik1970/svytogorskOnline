@@ -12,12 +12,12 @@
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
-     <url>
+     <!-- <url>
       <loc>https://svytogorsk.online/purpose_project.html</loc>
       <lastmod>2024-05-12</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
-   </url>
+   </url> -->
    <url>
       <loc>https://svytogorsk.online/purpose_project_ru.html</loc>
       <lastmod>2024-05-12</lastmod>
