@@ -6,7 +6,8 @@ import LavraGallery from './LavraGallery';
 import MonumentGallery from './MonumentGallery';
 import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
-import CookieConsent from '../CookieConsent';
+import DropdownInfrostr from './DropdownInfrostr'
+// import CookieConsent from '../CookieConsent';
 // import DisqusComments from './DisqusComments';
 // import Gratters from './Gratters';
 
@@ -83,7 +84,8 @@ function MainPage() {
     </a></li>
 
     <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
-    <li   class=""><a href="/transport.html">транспорт</a></li>
+    <li   class=""><DropdownInfrostr/></li>
+
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'contact' : 'контакты'}</a></li>
@@ -97,7 +99,8 @@ function MainPage() {
 <ul className="">
   <li ><a href="./index.html">{lan ? 'HOME' : 'дом'}</a></li>
 <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
-<li   class=""><a href="/transport.html">транспорт</a></li>
+
+<li   class=""><DropdownInfrostr/></li>
 
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>

@@ -5,44 +5,7 @@ function Feedback(props) {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  // const handleNameChange = (event) => {
-  //   setName(event.target.value);
-  // };
-
-  // const handleEmailChange = (event) => {
-  //   setEmail(event.target.value);
-  // };
-
-  // const handleMessageChange = (event) => {
-  //   setMessage(event.target.value);
-  // };
-
-  // const sendFeedback = () => {
-  //   const data = {
-  //     name: name,
-  //     email: email,
-  //     message: message,
-  //   };
-
-  //   // Добавляем email в объект data
-  //   data.senderEmail = email;
-
-  //   fetch('https://ytcenko1970.byethost12.com/send-email', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     mode: 'cors',
-  //     body: JSON.stringify(data),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       alert('Сообщение успешно отправлено');
-  //     })
-  //     .catch((error) => {
-  //       console.error('Ошибка:', error);
-  //     });
-  // };
+ 
 const closeFeedback = () =>{
   props.setIsFeedback(false)
 }
@@ -74,47 +37,9 @@ const closeFeedback = () =>{
     </div> 
     <div className='feedback__link'>
       Мы будем очень благоданы любому вашему участию в развитии нашего проекта, будь это оставленный <a style={{textDecoration: "underline", color: "blue"}} href='/disqus.html'>отзыв</a>, пожелание, предложение, скинутая ссылка друзьям, а так же любая финансовая помощь!<br/><br/>
-      Так же, просим вас посетить сайт наших партнёров, которые занимаются продажей готовых сайтов, там есть очень интересные предложения! Кликните здесь <a className='feedback__link-a' href='https://ready-site.vercel.app' >https://ready-site.vercel.app</a>
+      Так же, просим вас посетить сайт наших партнёров, которые занимаются продажей готовых сайтов, там есть очень интересные предложения! Кликните здесь <a className='feedback__link-a' href='https://prodazhas.site/' >https://prodazhas.site</a>
 
       </div> 
-
-    {/* <form name="contact" method="POST" className='feedbackform' data-netlify="true">
-      <p style={{color: '#fff', textAlign: 'center'}}>МЫ БУДЕМ ОЧЕНЬ ВАМ БЛАГОДАРНЫ, ЕСЛИ ВЫ ОСТАВИТЕ ОТЗЫВ О НАШЕМ САЙТЕ</p>
-  <p>
-     <input type="text" name="name" placeholder="NAME*" className='feedback__form'  />
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Your Role: <select name="role[]" multiple>
-      <option value="leader">Leader</option>
-      <option value="follower">Follower</option>
-    </select></label>
-  </p>
-  <p>
-    <textarea name="message" placeholder="MESSAGE*" className='feedback__form'></textarea>
-  </p>
-  <p>
-    <button type="submit" className="button__form" >Send</button>
-  </p>
-</form> */}
-
-
-    {/* <form id="feedbackForm" className='feedbackform' >
-      <label htmlFor="name">Извините, форма временно недоступна. Напишите пожалуйста на электронный адрес или оставте сообщение в чате</label>
-      <input type="text" id="name" disabled placeholder="NAME*" className='feedback__form' name="name" value={name} onChange={handleNameChange} />
-
-      <label htmlFor="email"></label>
-      <input type="email" id="email" disabled placeholder="EMAIL*" className='feedback__form'  name="email" value={email} onChange={handleEmailChange} />
-
-      <label htmlFor="message"></label>
-      <textarea id="message" disabled placeholder="MESSAGE*" className='feedback__form'  name="message" value={message} onChange={handleMessageChange}></textarea>
-
-      <button className="button__form" disabled type="button" onClick={sendFeedback}>
-        SEND
-      </button>
-    </form> */}
 
     </div>
     <div className='map__google'>

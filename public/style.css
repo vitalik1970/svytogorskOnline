@@ -1017,9 +1017,9 @@ font-family: "Kingthings_Petrock",  sans-serif;;
     font-size: 20px!important;
     font-family: 'Queen Love Stories free', sans-serif;
   }
-  .menu ul li a:hover {
+  /* .menu ul li a:hover {
     background-color: #f0f0f0;
-  }
+  } */
 
 
 /* *********************II twiter******************* */
@@ -1210,6 +1210,132 @@ padding: 7px 0;
         color: #fff;
         font-family: 'Helvetica Neue';
       } 
+      .dropdown__infrostr-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      
+      .dropdown__infrostr-menu-item {
+        position: relative;
+      }
+      
+      /* .dropdown__infrostr-menu-link:hover {
+        background-color: #f0f0f0;
+      } */
+      
+      .dropdown__infrostr-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* background-color: #fff; */
+        /* border: 1px solid #ccc; */
+        display: block;
+        z-index: 1000;
+        min-width: 200px;
+      }
+      
+      .dropdown__infrostr-item {
+        margin: 0;
+      }
+      
+      .dropdown__infrostr-link {
+        display: block;
+        padding: 4px 0px;
+        text-decoration: none;
+        color: #000;
+      }
+      .infrastructure {
+        width: 100%;
+      max-width: 1400;
+      margin: 0 auto;
+      /* padding: 0 24px; */
+      color: #fff;
+      }
+      .infrastructure__ {
+        margin-bottom: 15px;
+      }
+      .infrastructure__header {
+        height: 655px; 
+        background-image: url('/img/infrastructura/treshka.jpg');
+        background-position: center center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+        color: #fff;
+        position: relative;
+        font-family: 'Deutsch Gothic'; 
+      }
+      .infrastructure__header-mobil {
+        height: 655px; 
+        background-image: url('/img/infrastructura/treshka-mobil.jpg');
+        background-position: center center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+        color: #fff;
+        position: relative;
+        font-family: 'Deutsch Gothic';  
+      }
+      /* .infrastructure__header::before { 
+        content: "";
+        
+        position: absolute;
+        left: 900px;
+        top: 260px;
+        width: 200px;
+        height: 280px;
+        
+        background-image: url('/img/infrastructura/baner-treshka.jpg');
+       
+        background-size: 200px 280px;
+        background-repeat: no-repeat;
+        
+      } */
+      .infrastructure__header-top {
+        padding: 20px 20px 0 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .infrastructure__nav-a {
+        padding: 20px;
+        text-shadow: 2px 2px 2px black;
+        color: #fff;
+      }
+      .kylttovar {
+       position: relative;
+      }
+
+      /* .kylttovar::before {
+        content: "";
+        
+        position: absolute;
+        left: 1020px;
+        top: 260px;
+        width: 200px;
+        height: 280px;
+        background-image: url('/img/infrastructura/baner-kylt.jpg');
+
+        background-size: 200px 280px;
+        background-repeat: no-repeat;
+      } */
+      .infrastructure__header-h1 {
+        text-shadow: 2px 2px 2px black;
+        font-size: clamp(1.188rem, 0.662rem + 2.1vw, 2.5rem);
+      }
+      .desktop {
+        display: block;
+      }
+      .mobil {
+        display: none; 
+      }
+      
   @media (max-width: 800px){
     .hamburger-menu {
      display: block;
@@ -1220,6 +1346,9 @@ padding: 7px 0;
       .lng_btn {
         display: none;
     
+    }
+    .dropdown__infrostr-list {
+        left: -130px;
     }
 
 .menu {
@@ -1261,6 +1390,18 @@ padding: 7px 0;
     }
       }   
   @media (max-width: 480px){
+    .desktop {
+        display: none;
+      }
+      .mobil {
+        display: block; 
+      }
+      .infrastructure__header {
+        display: none;
+      }
+      .infrastructure__header-mobil {
+        display: block; 
+      }   
   .hamburger {
     width: 22px;
     height: 22px;
