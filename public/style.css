@@ -1259,18 +1259,8 @@ padding: 7px 0;
       .infrastructure__ {
         margin-bottom: 15px;
       }
-      .infrastructure__header {
-        height: 655px; 
-        background-image: url('/img/infrastructura/treshka.jpg');
-        background-position: center center; 
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-bottom: 15px;
-        color: #fff;
-        position: relative;
-        font-family: 'Deutsch Gothic'; 
-      }
       .infrastructure__header-mobil {
+        display: none;
         height: 655px; 
         background-image: url('/img/infrastructura/treshka-mobil.jpg');
         background-position: center center; 
@@ -1281,6 +1271,19 @@ padding: 7px 0;
         position: relative;
         font-family: 'Deutsch Gothic';  
       }
+      .infrastructure__header {
+        display: block;
+        height: 655px; 
+        background-image: url('/img/infrastructura/treshka.jpg');
+        background-position: center center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 15px;
+        color: #fff;
+        position: relative;
+        font-family: 'Deutsch Gothic'; 
+      }
+   
       /* .infrastructure__header::before { 
         content: "";
         
