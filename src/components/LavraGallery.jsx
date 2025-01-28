@@ -10,10 +10,10 @@ function Gallery(props) {
   const [selectedImage, setSelectedImage] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (imageSrc, index) => {
-    setSelectedImage(imageSrc);
-    setCurrentIndex(index);
-    props.setIsGalleryOpenLaurel(true);
+  const openModal = () => {
+    // setSelectedImage(imageSrc);
+    // setCurrentIndex(index);
+    props.setIsGalleryOpenLaurel(false);
   };
 
   const nextPhoto = () => {
@@ -60,6 +60,7 @@ function Gallery(props) {
    
        
     <div className="modal-content">  
+  
           <div className='gallery__close-next' >
         <div  onClick={closeModal}>
         {isModalOpen ? <img src="./img/icon-close.png" alt="icon" className="close-img"/> : '' }
@@ -75,6 +76,9 @@ function Gallery(props) {
        
       <div className="gallery__landscape" style={{ display: props.isGalleryOpenLaurel  ? 'block' : 'none' }}>
         <div className="gallery">
+        <button  className="feedback__close-button" onClick={openModal}>
+                            &times;
+      </button>
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}

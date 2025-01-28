@@ -11,10 +11,10 @@ function HistoryGallery(props) {
   const [selectedImage, setSelectedImage] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (imageSrc, index) => {
-    setSelectedImage(imageSrc);
-    setCurrentIndex(index);
-    props.setIsGalleryOpenHistory(true);
+  const openModal = () => {
+    // setSelectedImage(imageSrc);
+    // setCurrentIndex(index);
+    props.setIsGalleryOpenHistory(false);
   };
 
   const nextPhoto = () => {
@@ -71,6 +71,9 @@ function HistoryGallery(props) {
        
       <div className="gallery__history" style={{ display: props.isGalleryOpenHistory  ? 'block' : 'none' }}>
         <div className="gallery">
+        <button  className="feedback__close-button" onClick={openModal}>
+                            &times;
+      </button>
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}

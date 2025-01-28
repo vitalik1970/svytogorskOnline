@@ -11,10 +11,10 @@ function MonumentGallery(props) {
   const [selectedImage, setSelectedImage] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (imageSrc, index) => {
-    setSelectedImage(imageSrc);
-    setCurrentIndex(index);
-    props.setIsGalleryOpenMonument(true);
+  const openModal = () => {
+    // setSelectedImage(imageSrc);
+    // setCurrentIndex(index);
+    props.setIsGalleryOpenMonument(false);
   };
 
   const nextPhoto = () => {
@@ -68,6 +68,9 @@ function MonumentGallery(props) {
        
       <div className="gallery__artem" style={{ display: props.isGalleryOpenMonument  ? 'block' : 'none' }}>
         <div className="gallery">
+        <button  className="feedback__close-button" onClick={openModal}>
+                            &times;
+      </button>
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}

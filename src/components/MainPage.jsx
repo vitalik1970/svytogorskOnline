@@ -7,6 +7,7 @@ import MonumentGallery from './MonumentGallery';
 import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
 import DropdownInfrostr from './DropdownInfrostr'
+import  DropdowPhoto from './DropdowPhoto'
 // import CookieConsent from '../CookieConsent';
 // import DisqusComments from './DisqusComments';
 // import Gratters from './Gratters';
@@ -83,7 +84,8 @@ function MainPage() {
         <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
     </a></li>
 
-    <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
+    {/* <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li> */}
+    <li   class=""><DropdowPhoto handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
     <li   class=""><DropdownInfrostr/></li>
 
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
@@ -98,28 +100,27 @@ function MainPage() {
 				<nav className="head_menu">
 <ul className="">
   <li ><a href="./index.html">{lan ? 'HOME' : 'дом'}</a></li>
-<li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li>
-
+{/* <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li> */}
+<li   class=""><DropdowPhoto handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
 <li   class=""><DropdownInfrostr/></li>
 
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
-{/* <li   className=""><a href="./index_img.html"  style={{color: isFeedback ? '#ffa025' : ''}}>CHAT</a></li> */}
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'контакты'}</a></li>
 </ul>										
 				</nav>	
 			</div>
 		</div>
 	</header>      
-{showPhotoGallery ?
-   <div className="nav"> 
+{/* {showPhotoGallery ?
+   <div className="nav">  */}
 
- <div className="nav__gall-landscape" onClick={handleLandscapeClick}><h3>{lan ? 'Svyatogorsk Lavra' : 'святогорская лавра'}</h3>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> 
-<div class="nav__gall-artem" onClick={handleMonumentClick}><h3>{lan ? 'Monument photo' : 'памятник артема'}</h3>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
-<div class="nav__gall-history" onClick={handleHistoryClick}><h3>{lan ? 'Historical photos' : 'исторические фото'}</h3>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>
-<div class="nav__gall-ruined"><a href="./index_img.html"><h3>{lan ? 'RUINED CITY' : 'война'}</h3></a></div>
-    </div>
-: ''}
+ {/* <div className="nav__gall-landscape" onClick={handleLandscapeClick}><h3>{lan ? 'Svyatogorsk Lavra' : 'святогорская лавра'}</h3>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>  */}
+{/* <div class="nav__gall-artem" onClick={handleMonumentClick}><h3>{lan ? 'Monument photo' : 'памятник артема'}</h3>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> */}
+{/* <div class="nav__gall-history" onClick={handleHistoryClick}><h3>{lan ? 'Historical photos' : 'исторические фото'}</h3>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> */}
+{/* <div class="nav__gall-ruined"><a href="./index_img.html"><h3>{lan ? 'RUINED CITY' : 'война'}</h3></a></div> */}
+    {/* </div>
+: ''} */}
  
 
    <PhotoStella/> 

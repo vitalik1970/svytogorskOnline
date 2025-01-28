@@ -8,7 +8,7 @@ const DropdownInfrostr= () => {
   };
 
   return (
-    <ul className="dropdown__infrostr-menu">
+    <ul className="dropdown__infrostr-menu" onClick={toggleDropdown}>
       <li 
         className="dropdown__infrostr-menu-item dropdown"
         onMouseEnter={toggleDropdown}
