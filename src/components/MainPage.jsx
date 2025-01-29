@@ -6,7 +6,7 @@ import LavraGallery from './LavraGallery';
 import MonumentGallery from './MonumentGallery';
 import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
-import DropdownInfrostr from './DropdownInfrostr'
+import DropdownInfrostr from './DropdownInfrostr';
 import  DropdowPhoto from './DropdowPhoto'
 // import CookieConsent from '../CookieConsent';
 // import DisqusComments from './DisqusComments';
@@ -20,20 +20,22 @@ function MainPage() {
   const [isGalleryOpenHistory , setIsGalleryOpenHistory ] = useState(false);
   const [isMessage, setIsMessage] = useState('');
   const [isPurpose, setIsPurpose] = useState(false); 
-  const [showPhotoGallery, setshowPhotoGallery] = useState(false);
+  // const [showPhotoGallery, setshowPhotoGallery] = useState(false);
   const [lan, setLan] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null)
+
   
  
 
 
-  const clickShowPhotoGallery = () => {
-    setshowPhotoGallery(!showPhotoGallery);
-    setIsGalleryOpenLaurel(false);
-    setIsGalleryOpenMonument(false);
-    setIsGalleryOpenHistory(false);
-    setIsOpen(!isOpen);
-  }
+  // const clickShowPhotoGallery = () => {
+  //   setshowPhotoGallery(!showPhotoGallery);
+  //   setIsGalleryOpenLaurel(false);
+  //   setIsGalleryOpenMonument(false);
+  //   setIsGalleryOpenHistory(false);
+  //   setIsOpen(!isOpen);
+  // }
   const handleMessageClick = () => {
     setIsMessage(!isMessage)
   }
@@ -68,8 +70,8 @@ function MainPage() {
       <div className="logo"><h1>СВЯТОГОРСК.ФОТО</h1></div>
 
       <div className="lng_btn ">
-      <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
-        <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
+      {/* <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
+        <div className="nav__en" onClick={() =>setLan(true) }>EN</div> */}
     </div>
     <div className="hamburger-menu">
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -80,13 +82,12 @@ function MainPage() {
       <nav className={`menu ${isOpen ? 'open' : ''}`}>
         <ul>
           <li><a className="lng_btn">
-      <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
-        <div className="nav__en" onClick={() =>setLan(true) }>EN</div>
+      {/* <div className="nav__ru" onClick={() =>setLan(false) }>RU</div>
+        <div className="nav__en" onClick={() =>setLan(true) }>EN</div> */}
     </a></li>
 
-    {/* <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li> */}
-    <li   class=""><DropdowPhoto handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
-    <li   class=""><DropdownInfrostr/></li>
+    <li   class=""><DropdowPhoto activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
+    <li   class=""><DropdownInfrostr activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
 
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
@@ -100,9 +101,9 @@ function MainPage() {
 				<nav className="head_menu">
 <ul className="">
   <li ><a href="./index.html">{lan ? 'HOME' : 'дом'}</a></li>
-{/* <li  className=""><a onClick={clickShowPhotoGallery} style={{color: showPhotoGallery ? '#ffa025' : ''}} >{lan ? 'PHOTOGALLERY' : 'фотогалерея'}</a></li> */}
-<li   class=""><DropdowPhoto handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
-<li   class=""><DropdownInfrostr/></li>
+
+<li   class=""><DropdowPhoto  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
+<li   class=""><DropdownInfrostr  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
 
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
@@ -112,15 +113,6 @@ function MainPage() {
 			</div>
 		</div>
 	</header>      
-{/* {showPhotoGallery ?
-   <div className="nav">  */}
-
- {/* <div className="nav__gall-landscape" onClick={handleLandscapeClick}><h3>{lan ? 'Svyatogorsk Lavra' : 'святогорская лавра'}</h3>{isGalleryOpenLaurel ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div>  */}
-{/* <div class="nav__gall-artem" onClick={handleMonumentClick}><h3>{lan ? 'Monument photo' : 'памятник артема'}</h3>{isGalleryOpenMonument ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> */}
-{/* <div class="nav__gall-history" onClick={handleHistoryClick}><h3>{lan ? 'Historical photos' : 'исторические фото'}</h3>{isGalleryOpenHistory ? <img src="./img/icon-close.png" alt="icon" className="nav__gall-close"/> : ''}</div> */}
-{/* <div class="nav__gall-ruined"><a href="./index_img.html"><h3>{lan ? 'RUINED CITY' : 'война'}</h3></a></div> */}
-    {/* </div>
-: ''} */}
  
 
    <PhotoStella/> 
@@ -131,7 +123,7 @@ function MainPage() {
    <Feedback isFeedback={isFeedback} setIsFeedback={setIsFeedback}/>
   
 </div>
-<a href='https://creategift.website/' title="creation of creative low-cost websites"></a>
+{/* <a href='https://creategift.website/' title="creation of creative low-cost websites"></a> */}
 <a href='https://proxiedmail.com/' title="Create proxy-email"></a>
 <a href="https://meetsometimes.com/" title="site of interesting meetings"></a>
 

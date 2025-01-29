@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const DropdownInfrostr= () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const DropdownInfrostr= ({setActiveDropdown, activeDropdown}) => {
+//   const [isOpen, setIsOpen] = useState(false);
+const isOpen = activeDropdown === "infrostr";
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setActiveDropdown(isOpen ? null : "infrostr");
   };
 
   return (
@@ -19,7 +19,7 @@ const DropdownInfrostr= () => {
         </a>
         {isOpen && (
           <ul className="dropdown__infrostr-list">
-            <li className="dropdown__infrostr-dropdown-item">
+            <li className="dropdown__infrostr-item">
               <a href="/transport.html" className="dropdown__infrostr-link">
                 транспорт
               </a>

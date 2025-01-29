@@ -974,7 +974,7 @@ font-family: "Kingthings_Petrock",  sans-serif;;
     position: absolute;
     top: 56px;
     right: 0;
-    width: 246px;
+    width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -1241,13 +1241,16 @@ padding: 7px 0;
       
       .dropdown__infrostr-item {
         margin: 0;
+         border-bottom: none!important;
       }
       
       .dropdown__infrostr-link {
         display: block;
-        padding: 4px 0px;
+        padding: 10px;
+        color: #fff;
         text-decoration: none;
-        color: #000;
+        font-style: italic;
+       
       }
       .infrastructure {
         width: 100%;

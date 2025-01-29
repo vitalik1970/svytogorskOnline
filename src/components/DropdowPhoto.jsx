@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const DropdowPhoto = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+//   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
-  const togglDropdown = () => {
-    setIsOpen(!isOpen);
+  const isOpen = props.activeDropdown === "photo";
+
+  const toggleDropdown = () => {
+    props.setActiveDropdown(isOpen ? null : "photo");
   };
   useEffect(() => {
     function handleResize() {
@@ -20,18 +22,18 @@ const DropdowPhoto = (props) => {
 }, []);
 
   return (
-    <ul className="dropdown__infrostr-menu" onClick={togglDropdown}>
+    <ul className="dropdown__infrostr-menu" onClick={toggleDropdown}>
       <li 
         className="dropdown__infrostr-menu-item dropdown"
-        onMouseEnter={togglDropdown}
-        onMouseLeave={togglDropdown}
+        onMouseEnter={toggleDropdown}
+        onMouseLeave={toggleDropdown}
       >
         <a href="#" className="dropdown__infrostr-menu-link">
         фотогалерея
         </a>
         {isOpen && (
           <ul className="dropdown__infrostr-list">
-            <li className="dropdown__infrostr-dropdown-item">
+            <li className="dropdown__infrostr-item">
               <a onClick={props.handleLandscapeClick} className="dropdown__infrostr-link">
               {isMobile ? 'лавра' : 'святогорская лавра'}
               </a>
