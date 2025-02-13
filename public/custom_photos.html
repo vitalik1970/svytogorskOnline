@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея Святогорска</title>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            background: #f9f9f9;
+            max-height: 400px;
+        }
+
+        .gallery-item img {
+            /* max-width: 100%;
+            height: auto;
+            border-radius: 8px; */
+            max-width: 100%;
+    /* height: auto; */
+    border-radius: 8px;
+    max-height: 100%;
+    width: auto;
+    margin: 0 auto;
+        }
+        .gallery-item p {
+        margin-top: 13px;
+        }
+    </style>
+</head>
+<body>
+    <header >
+		<div class="custom_photos__header">
+			<div class="infrastructure__header-top">
+            	
+      <h1 class="infrastructure__header-h1" >Фото людей влюбленных в Святогорск</h1>
+      <!-- <div class="lng_btn ">
+        <a href="./purpose_project.html" class="nav-list__link" >EN</a>
+        <a class="nav-list__link--active" href="#">RU</a>
+    </div> -->
+			</div>
+			<div class="header_w">
+				<nav class="head_menu">
+        <a href="./index.html" class="infrastructure__nav-a">Назад</a>
+				</nav>	
+			</div>
+		</div>
+	</header> 
+
+    <div id="gallery"></div>
+
+    <script>
+        const SUPABASE_URL = "https://oksvghnepybinafbvwun.supabase.co"; 
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rc3ZnaG5lcHliaW5hZmJ2d3VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg1OTAxNzksImV4cCI6MjA0NDE2NjE3OX0.AccdbZb514ICSWEMXqmZEtBPsbE36UTyoOh8n0YdqWA";  
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function fetchImages() {
+            try {
+                const { data, error } = await supabase.from('photos_metadata').select('*').order('created_at', { ascending: false });
+                console.log(data, 'data data');
+                if (error) {
+                    console.error('Ошибка загрузки изображений:', error);
+                    return;
+                }
+
+                const gallery = document.getElementById("gallery");
+                gallery.innerHTML = "";  
+                console.log(gallery, 'gallery gallery '); 
+                data.forEach(photo => {
+                    const imgContainer = document.createElement("div");
+                    imgContainer.classList.add("gallery-item");
+
+                    const link = document.createElement("a");
+                    link.href = photo.public_url;  // Ссылка на оригинальное изображение
+                    link.target = "_blank"; 
+                    link.rel = "noopener noreferrer"; // Безопасность
+
+                    const img = document.createElement("img");
+                    img.src = photo.public_url;
+                    img.alt = "Фото";
+                    console.log(img, 'img img');
+                    const description = document.createElement("p");
+                    description.textContent = `"${photo.description}"`;
+
+                    const userName = document.createElement("strong");
+                    userName.textContent = `Автор: ${photo.user_name}`;
+
+                    link.appendChild(img); // Оборачиваем картинку в ссылку
+                    imgContainer.appendChild(link);
+                    imgContainer.appendChild(description);
+                    imgContainer.appendChild(userName);
+
+                    gallery.appendChild(imgContainer);
+                });
+            } catch (err) {
+                console.error("Ошибка при загрузке данных:", err);
+            }
+        }
+
+        fetchImages();
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея Святогорска</title>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #gallery {
+            /* display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  */
+            gap: 10px;
+            padding: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-item {
+           
+            /* height: 200px;  */
+            /* overflow: hidden; */
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            /* width: 100%; */
+            height: auto;
+            /* object-fit: cover;  */
+             object-fit: contain; 
+            border-radius: 8px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Галерея Святогорска</h1>
+    <div id="gallery"></div>
+
+    <script>
+        // Подключение к Supabase
+        const SUPABASE_URL = "https://oksvghnepybinafbvwun.supabase.co"; 
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rc3ZnaG5lcHliaW5hZmJ2d3VuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg1OTAxNzksImV4cCI6MjA0NDE2NjE3OX0.AccdbZb514ICSWEMXqmZEtBPsbE36UTyoOh8n0YdqWA";  
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        async function fetchImages() {
+            try {
+                const { data, error } = await supabase.storage.from('svytogorsk-photo').list('');
+                if (error) {
+                    console.error('Ошибка загрузки изображений:', error);
+                    return;
+                }
+
+                const gallery = document.getElementById("gallery");
+                gallery.innerHTML = "";  
+
+                data.forEach(file => {
+                    const publicUrl = supabase.storage.from('svytogorsk-photo').getPublicUrl(file.name).data.publicUrl;
+                    const imgContainer = document.createElement("div");
+                    imgContainer.classList.add("gallery-item");
+
+                    const img = document.createElement("img");
+                    img.src = publicUrl;
+                    img.alt = "Фото";
+
+                    imgContainer.appendChild(img);
+                    gallery.appendChild(imgContainer);
+                });
+            } catch (err) {
+                console.error("Ошибка при загрузке данных:", err);
+            }
+        }
+
+        fetchImages(); // Загружаем фото при открытии страницы
+    </script>
+</body>
+</html> -->

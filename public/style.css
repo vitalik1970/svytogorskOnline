@@ -17,8 +17,8 @@
     src: url("./fonts/Kingthings_Petrock.ttf")format("woff");
     
 }
-@font-face{font-family:neutral face;font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
-@font-face{font-family:neutral face;font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
+@font-face{font-family:'Neutral face';font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
+@font-face{font-family:"Neutral face";font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
 @font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
 /* @import url('https://fonts.cdnfonts.com/css/queen-love-stories-free');
 @import url('https://fonts.cdnfonts.com/css/futura-pt'); */
@@ -43,7 +43,7 @@ ul, ul li {
     list-style: none;
 }
 body {
- font-family: 'Queen Love Stories free', sans-serif;
+ /* font-family: 'Queen Love Stories free', sans-serif; */
     font-style: normal;
     font-weight: 400;
     color: #1A1A1A;
@@ -396,14 +396,14 @@ transform: scale(1.1);
     padding: 15px 20px;
 }
 .feedbackform {
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     display: flex;
     flex-direction: column;
     max-width: 603px;
     margin: 0 auto;
   }
   .feedbackform:hover {  
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease; 
   }
   label {
@@ -470,6 +470,7 @@ transform: scale(1.1);
         background-color: transparent;
         position: relative;
         margin: 25px auto 0;
+        text-align: center;
   }
   .button__form:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -1262,18 +1263,7 @@ padding: 7px 0;
       .infrastructure__ {
         margin-bottom: 15px;
       }
-      /* .infrastructure__header-mobil {
-        display: none;
-        height: 655px; 
-        background-image: url('/img/infrastructura/treshka-mobil.jpg');
-        background-position: center center; 
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-bottom: 15px;
-        color: #fff;
-        position: relative;
-        font-family: 'Deutsch Gothic';  
-      } */
+    
       .infrastructure__header {
         display: block;
         height: 655px; 
@@ -1287,21 +1277,6 @@ padding: 7px 0;
         font-family: 'Deutsch Gothic'; 
       }
    
-      /* .infrastructure__header::before { 
-        content: "";
-        
-        position: absolute;
-        left: 900px;
-        top: 260px;
-        width: 200px;
-        height: 280px;
-        
-        background-image: url('/img/infrastructura/baner-treshka.jpg');
-       
-        background-size: 200px 280px;
-        background-repeat: no-repeat;
-        
-      } */
       .infrastructure__header-top {
         padding: 20px 20px 0 20px;
         font-size: 20px;
@@ -1317,20 +1292,6 @@ padding: 7px 0;
       .kylttovar {
        position: relative;
       }
-
-      /* .kylttovar::before {
-        content: "";
-        
-        position: absolute;
-        left: 1020px;
-        top: 260px;
-        width: 200px;
-        height: 280px;
-        background-image: url('/img/infrastructura/baner-kylt.jpg');
-
-        background-size: 200px 280px;
-        background-repeat: no-repeat;
-      } */
       .infrastructure__header-h1 {
         text-shadow: 2px 2px 2px black;
         font-size: clamp(1.188rem, 0.662rem + 2.1vw, 2.5rem);
@@ -1353,7 +1314,87 @@ padding: 7px 0;
         color: #fff;
         font-size: 23px;
     }
-      
+    .custom_photos__header {
+      /* display: block; */
+      /* height: 655px;  */
+      background-image: url('/img/custom_photos/vid_maun.png');
+      background-position: center center; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 15px;
+      color: #fff;
+      position: relative;
+      font-family: 'Deutsch Gothic'; 
+      text-shadow: 2px 2px 2px black;
+    }
+    .custom-file-input {
+      display: none;
+  }
+.photos__text-footer {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "PT Sans", sans-serif;
+}
+.photos__text-header {
+  max-width: 740px;
+  text-align: center;
+  margin: 15px auto 0;
+  color: #fff;
+font-size: 24px;
+  font-family: "PT Sans", sans-serif;
+  text-shadow: 2px 2px 2px black;
+  padding: 0 13px;
+}
+.photos__text-requirements {
+  max-width: 620px;
+  margin: 10px auto 0;
+  color: #fff;
+  font-size: 15px;
+  padding: 0 13px;
+}  
+.form__text-error {
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #fd576c;
+}
+
+.form__text-error p {
+  color: #fd576c;
+}
+.form__text-error span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  padding-top: 2px;
+  padding-left: 6px;
+  font-size: 15px;
+  line-height: 12px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #fd7386;
+}
+.photos__input-desc {
+  font-size: 16px;
+  width: 100%;
+  color: #ddd;
+  padding: 5px;
+  margin-top: 5px;
+  background: none;
+  border-bottom: 1px solid #fff !important;
+  border: none;
+  height: 35px;
+}
+
   @media (max-width: 800px){
     .hamburger-menu {
      display: block;

@@ -53,11 +53,16 @@ const DropdowPhoto = (props) => {
               война
               </a>
             </li>
-            {/* <li className="dropdown__infrostr-item">
-              <a href="https://drive.google.com/file/d/1iuSUOTAvIrPUlpqHYETwOE_6QGmVkof7/view?usp=sharing" className="dropdown__infrostr-link">
-             видео
+            <li className="dropdown__infrostr-item">
+              <a onClick={props.handleUploadPhoto}  className="dropdown__infrostr-link">
+              {isMobile ? 'загрузить фото' : 'загрузить свои фото'}
               </a>
-            </li> */}
+            </li>
+            <li className="dropdown__infrostr-item">
+              <a href="./custom_photos.html" className="dropdown__infrostr-link">
+              {isMobile ? 'фото пользователей' : 'просмотреть фото пользователей'}
+              </a>
+            </li>
           </ul>
         )}
       </li>

@@ -9,6 +9,7 @@ function Feedback(props) {
 const closeFeedback = () =>{
   props.setIsFeedback(false)
 }
+
   return (
   
     <div className='feedback__wrapper' style={{ display: props.isFeedback   ? 'block' : 'none' }}>
@@ -36,8 +37,8 @@ const closeFeedback = () =>{
         </div>
     </div> 
     <div className='feedback__link'>
-      Мы будем очень благоданы любому вашему участию в развитии нашего проекта, будь это оставленный <a style={{textDecoration: "underline", color: "blue"}} href='/disqus.html'>отзыв</a>, пожелание, предложение, скинутая ссылка друзьям, а так же любая финансовая помощь!<br/><br/>
-      Так же, просим вас посетить сайт наших партнёров, которые занимаются продажей готовых сайтов, там есть очень интересные предложения! Кликните здесь <a className='feedback__link-a' href='https://prodazhas.site/' >https://prodazhas.site</a>
+      Мы будем очень благоданы любому вашему участию в развитии нашего проекта, будь это оставленный <a style={{textDecoration: "underline", color: "#009bff"}} href='/disqus.html'>отзыв</a>, пожелание, предложение, скинутая ссылка друзьям, а так же любая финансовая помощь!<br/><br/>
+      Так же, просим вас посетить сайт наших партнёров, которые занимаются продажей готовых сайтов, там есть очень интересные предложения! Кликните здесь <a style={{textDecoration: "underline", color: "#009bff"}} className='feedback__link-a' href='https://prodazhas.site/' >https://prodazhas.site</a>
 
       </div> 
 

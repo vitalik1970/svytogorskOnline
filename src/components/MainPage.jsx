@@ -7,7 +7,9 @@ import MonumentGallery from './MonumentGallery';
 import HistoryGallery from './HistoryGallery';
 import Feedback from './Feedback';
 import DropdownInfrostr from './DropdownInfrostr';
-import  DropdowPhoto from './DropdowPhoto'
+import  DropdowPhoto from './DropdowPhoto';
+import UploadPhotos from './UploadPhotos';
+import LeaveReview from './LeaveReview';
 // import CookieConsent from '../CookieConsent';
 // import DisqusComments from './DisqusComments';
 // import Gratters from './Gratters';
@@ -20,22 +22,11 @@ function MainPage() {
   const [isGalleryOpenHistory , setIsGalleryOpenHistory ] = useState(false);
   const [isMessage, setIsMessage] = useState('');
   const [isPurpose, setIsPurpose] = useState(false); 
-  // const [showPhotoGallery, setshowPhotoGallery] = useState(false);
+  const [showUploadPhoto, setshowUploadPhoto] = useState(false);
   const [lan, setLan] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null)
 
-  
- 
-
-
-  // const clickShowPhotoGallery = () => {
-  //   setshowPhotoGallery(!showPhotoGallery);
-  //   setIsGalleryOpenLaurel(false);
-  //   setIsGalleryOpenMonument(false);
-  //   setIsGalleryOpenHistory(false);
-  //   setIsOpen(!isOpen);
-  // }
   const handleMessageClick = () => {
     setIsMessage(!isMessage)
   }
@@ -58,7 +49,9 @@ function MainPage() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+  const handleUploadPhoto = () => {
+    setshowUploadPhoto(!showUploadPhoto);
+  };
   return (
     <>
       <div className="main__wrapper">
@@ -86,7 +79,7 @@ function MainPage() {
         <div className="nav__en" onClick={() =>setLan(true) }>EN</div> */}
     </a></li>
 
-    <li   class=""><DropdowPhoto activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
+    <li   class=""><DropdowPhoto activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} handleUploadPhoto={handleUploadPhoto} /></li>
     <li   class=""><DropdownInfrostr activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
 
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
@@ -102,8 +95,8 @@ function MainPage() {
 <ul className="">
   <li ><a href="./index.html">{lan ? 'HOME' : 'дом'}</a></li>
 
-<li   class=""><DropdowPhoto  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} /></li>
-<li   class=""><DropdownInfrostr  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
+<li   className=""><DropdowPhoto  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick}  handleUploadPhoto={handleUploadPhoto}/></li>
+<li   className=""><DropdownInfrostr  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
 
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
 <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
@@ -121,6 +114,8 @@ function MainPage() {
    <HistoryGallery isGalleryOpenHistory={isGalleryOpenHistory} setIsGalleryOpenHistory={setIsGalleryOpenHistory}/>
    {/* <DisqusComments isMessage={isMessage} setIsMessage={setIsMessage}/> */}
    <Feedback isFeedback={isFeedback} setIsFeedback={setIsFeedback}/>
+   <UploadPhotos showUploadPhoto={showUploadPhoto} setshowUploadPhoto={setshowUploadPhoto}/>
+   <LeaveReview setshowUploadPhoto={setshowUploadPhoto}/>
   
 </div>
 {/* <a href='https://creategift.website/' title="creation of creative low-cost websites"></a> */}
@@ -131,5 +126,5 @@ function MainPage() {
   )
 }
 
-export default MainPage
+export default MainPage;
 
