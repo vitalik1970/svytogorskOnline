@@ -9,7 +9,7 @@ const UploadForm = (props) => {
   const [imageUrl, setImageUrl] = useState('');
   const [error, setError] = useState(false);
   const [errorr, setErrorr] = useState(false);
- console.log(file, 'file');
+
   const handleUpload = async () => {
     event.preventDefault(); 
   
@@ -90,7 +90,7 @@ const UploadForm = (props) => {
            <input type="text" name="name" placeholder="ИМЯ*" className='feedback__form' value={userName} onChange={(e) => setUserName(e.target.value)} />
         </p>
        <p>
-          <input type="text" style={{color: "#fff"}} placeholder="ОПИСАНИЕ ФОТО*" className='photos__input-desc' value={description} onChange={(e) => setDescription(e.target.value, setError(false))} />
+          <input type="text" style={{color: "#fff"}} placeholder="ОПИСАНИЕ ФОТО*" className='photos__input-desc' value={description} onChange={(e) => {setDescription(e.target.value); setError(false)}} />
         </p>
        
         <div className="custom-file-upload">
