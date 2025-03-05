@@ -11,6 +11,10 @@ import  DropdowPhoto from './DropdowPhoto';
 import UploadPhotos from './UploadPhotos';
 import LeaveReview from './LeaveReview';
 import ShowVideo from './ShowVideo'
+import DropdownProjct from './DropdownProjct';
+import MySvyatogorsk from './MySvyatogorsk';
+import RealitiesSvyatogorsk from './RealitiesSvyatogorsk';
+// import DropdownProjct from './DropdownProjct'
 // import CookieConsent from '../CookieConsent';
 // import DisqusComments from './DisqusComments';
 // import Gratters from './Gratters';
@@ -28,7 +32,8 @@ function MainPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [showVideo, setShowVideo] = useState(false);
-
+  const [showMySvyatogorsk, setShowMySvyatogorsk] = useState(false);
+  const [showRealitiesSvyatogorsk, setShowRealitiesSvyatogorsk] = useState(false);
   const handleMessageClick = () => {
     setIsMessage(!isMessage)
   }
@@ -62,6 +67,15 @@ function MainPage() {
     setShowVideo(!showVideo);
     setIsOpen(false);
   }; 
+  const handleMySvyatogorsk = () => {
+    setShowMySvyatogorsk(!showMySvyatogorsk);
+    setIsOpen(false);
+  }; 
+  const handlRealitiesSvyatogorsk = () => {
+    setShowRealitiesSvyatogorsk(!showRealitiesSvyatogorsk);
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div className="main__wrapper">
@@ -90,10 +104,12 @@ function MainPage() {
     </a></li>
     <li ><a onClick={handleVideoClick}  >{lan ? 'HOME' : 'видео'}</a></li>
     <li   class=""><DropdowPhoto activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick} handleUploadPhoto={handleUploadPhoto} /></li>
-    <li   class=""><DropdownInfrostr activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
+    <li   class=""><DropdownInfrostr activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handlRealitiesSvyatogorsk={handlRealitiesSvyatogorsk}/></li>
 
       <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
-<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
+
+{/* <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li> */}
+<li   class=""><DropdownProjct activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}  handleMySvyatogorsk={handleMySvyatogorsk}/></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'contact' : 'контакты'}</a></li>
         </ul>
       </nav>
@@ -106,10 +122,11 @@ function MainPage() {
   <li ><a onClick={handleVideoClick}  >{lan ? 'HOME' : 'видео'}</a></li>
 
 <li   className=""><DropdowPhoto  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleHistoryClick={handleHistoryClick} handleMonumentClick={handleMonumentClick} handleLandscapeClick={handleLandscapeClick}  handleUploadPhoto={handleUploadPhoto}/></li>
-<li   className=""><DropdownInfrostr  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}/></li>
+<li   className=""><DropdownInfrostr  activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handlRealitiesSvyatogorsk={handlRealitiesSvyatogorsk}/></li>
 
 <li   className=""><a onClick={handleMessageClick} href="./disqus.html" style={{color: isMessage ? '#ffa025' : ''}}>{lan ? 'LEAVE FEEDBACK' : 'оставить отзыв'}</a></li>
-<li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li>
+{/* <li   className=""><a onClick={handlePurposeClick} href="./purpose_project_ru.html"  style={{color: isPurpose ? '#ffa025' : ''}}>{lan ? 'PURPOSE PROJECT' : 'цель проекта'}</a></li> */}
+<li   class=""><DropdownProjct activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}  handleMySvyatogorsk={ handleMySvyatogorsk}/></li>
 <li   className=""><a onClick={handleFeedbackClick} style={{color: isFeedback ? '#ffa025' : ''}}>{lan ? 'CONTACT' : 'контакты'}</a></li>
 </ul>										
 				</nav>	
@@ -127,6 +144,8 @@ function MainPage() {
    <UploadPhotos showUploadPhoto={showUploadPhoto} setshowUploadPhoto={setshowUploadPhoto}/>
    <LeaveReview setshowUploadPhoto={setshowUploadPhoto}/>
    <ShowVideo setShowVideo={setShowVideo} showVideo={showVideo}/>
+   <MySvyatogorsk   setShowMySvyatogorsk={setShowMySvyatogorsk} showMySvyatogorsk={showMySvyatogorsk}/> 
+   <RealitiesSvyatogorsk  setShowRealitiesSvyatogorsk={setShowRealitiesSvyatogorsk} showRealitiesSvyatogorsk={showRealitiesSvyatogorsk}/>
   
 </div>
 {/* <a href='https://creategift.website/' title="creation of creative low-cost websites"></a> */}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const DropdownInfrostr= ({setActiveDropdown, activeDropdown, handlRealitiesSvyatogorsk}) => {
+const DropdownProjct = ({setActiveDropdown, activeDropdown,  handleMySvyatogorsk}) => {
 //   const [isOpen, setIsOpen] = useState(false);
-const isOpen = activeDropdown === "infrostr";
+const isOpen = activeDropdown === "projct";
   const toggleDropdown = () => {
-    setActiveDropdown(isOpen ? null : "infrostr");
+    setActiveDropdown(isOpen ? null : "projct");
   };
 
   return (
@@ -15,23 +15,18 @@ const isOpen = activeDropdown === "infrostr";
         onMouseLeave={toggleDropdown}
       >
         <a href="#" className="dropdown__infrostr-menu-link">
-          о Святогорске
+          о проекте
         </a>
         {isOpen && (
           <ul className="dropdown__infrostr-list">
             <li className="dropdown__infrostr-item">
-              <a onClick={handlRealitiesSvyatogorsk} className="dropdown__infrostr-link">
-                пару слов о SV
+              <a href="./purpose_project_ru.html"  className="dropdown__infrostr-link">
+                цель проекта
               </a>
             </li>
             <li className="dropdown__infrostr-item">
-              <a href="/transport.html" className="dropdown__infrostr-link">
-                транспорт
-              </a>
-            </li>
-            <li className="dropdown__infrostr-item">
-              <a href="/infrastructure.html" className="dropdown__infrostr-link">
-                магазины
+              <a onClick={handleMySvyatogorsk} className="dropdown__infrostr-link">
+                Я <span style={{fontSize: "24px"}}>&#10084;&#65039;</span> Святогорск!
               </a>
             </li>
           </ul>
@@ -41,4 +36,4 @@ const isOpen = activeDropdown === "infrostr";
   );
 };
 
-export default DropdownInfrostr;
+export default DropdownProjct;

@@ -17,6 +17,12 @@
     src: url("./fonts/Kingthings_Petrock.ttf")format("woff");
     
 }
+
+@font-face {
+  font-family: 'Montserrat-Light.ttf';
+  src: url("./fonts/Montserrat-Light.ttf")format("ttf");
+  
+}
 @font-face{font-family:'Neutral face';font-style:normal;font-weight:400;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFace.woff) format('woff')}
 @font-face{font-family:"Neutral face";font-style:normal;font-weight:700;src:local('Neutral Face'),url(https://fonts.cdnfonts.com/s/83475/NeutralFaceBold.woff) format('woff')}
 @font-face{font-family:queen love stories free;font-style:normal;font-weight:400;src:local('Queen Love Stories free'),url('https://fonts.cdnfonts.com/s/92171/Queen Love Stories free.woff') format('woff')}
@@ -1236,7 +1242,7 @@ padding: 7px 0;
         /* border: 1px solid #ccc; */
         display: block;
         z-index: 1000;
-        min-width: 200px;
+        min-width: 250px;
       }
       
       .dropdown__infrostr-item {
@@ -1246,7 +1252,7 @@ padding: 7px 0;
       
       .dropdown__infrostr-link {
         display: block;
-        padding: 10px;
+        padding: 10px 0;
         color: #fff;
         text-decoration: none;
         font-style: italic;
@@ -1341,7 +1347,7 @@ padding: 7px 0;
   text-align: center;
   margin: 15px auto 0;
   color: #fff;
-font-size: 24px;
+font-size: 25px;
   font-family: "PT Sans", sans-serif;
   text-shadow: 2px 2px 2px black;
   padding: 0 13px;
@@ -1431,6 +1437,21 @@ font-size: 24px;
   max-width: 429px;
   margin: 0 auto 15px;
   border-radius: 10px;
+}
+.mysvyatogorsk__content {
+  max-width: 1140px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255);
+  color: rgb(20 20 20 / 77%);;
+  letter-spacing: 1.1px;
+  line-height: 32px;
+  font-size: 24px;
+  text-align: justify;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 500;
+}
+.mysvyatogorsk__content p{
+margin-bottom: 11px;
 }
   @media (max-width: 800px){
     .hamburger-menu {
