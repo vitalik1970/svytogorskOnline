@@ -96,13 +96,17 @@
    <div class="twittooitem__element"><hr></div>
     <div class="twittooitem__conteiner">
  
+        
+        
+
+
 
 
          <div class="twittooitem__conteiner-wrappertoo">
             <div class="twittooitem__conteiner-wrappertoo-stela"><img src="/img/60_big.jpg" alt=""> </div>
 
-            <div class="twitfistitem__conteiner-wrappertoo-logo"><b>Svytogorsk.Online</b> @svytogorsk.online·28 Jan
-           
+            <div class="twitfistitem__conteiner-wrappertoo-logo"><b>Svytogorsk.Online</b> @svytogorsk.online·<span class="current-date"></span>
+
                    </div>
          </div>
          <form name="contact" method="POST" class='feedbackform' data-netlify="true"> 
@@ -147,26 +151,24 @@
     <div class="get_wrapper">
         <div class="twittooitem-get">
             <div class="twittooitem__element"><hr></div>
-             <div class="twittooitem__conteiner-get">
-          
-         
+             <div class="twittooitem__conteiner-get">               
          
                   <div class="twittooitem__conteiner-wrappertoo">
                      <div class="twittooitem__conteiner-wrappertoo-stela"><img src="/img/60_big.jpg" alt=""> </div>
          
-                     <ul class="twitfistitem__conteiner-wrappertoo-logo"><b>Svytogorsk.Online</b> @svytogorsk.online·28 Jan
-                    
+                    <div class="twitfistitem__conteiner-wrappertoo-logo"><b>Svytogorsk.Online</b> @svytogorsk.online·<span class="current-date"></span> </div>
+
                             </div>
                              <ul class="twitfistitem__conteiner-messagetoo text-message">
-                        <li>Nic:Сергей· Никогда раньше не видел такого сайта про Святогорск, видно что недавно созданный, много ещё недароботок, но надеюсь что админ будет работать над этим. Чем больше сайтов про наш славный город, тем лучше! Нам надо возраждать былую славу!</li>
+                        <li>Name:Сергей· Никогда раньше не видел такого сайта про Святогорск, видно что недавно созданный, много ещё недароботок, но надеюсь что админ будет работать над этим. Чем больше сайтов про наш славный город, тем лучше! Нам надо возраждать былую славу!</li>
                         <li>Name:Степан· Гарний цікавий сайт, буду заходити дивитись ще</li> 
-                        <!-- <li></li>
-                        <li></li>  -->
+                        <li>Name: Боря· Норм так, много интересных фото!</li>
+                        <li></li> 
 
                             </ul>
                   </div>
                  
-         
+               
                   <div style="margin-bottom: 10px; margin-left: 40px" class="founder__btn">
                     <div class="founder__btn_heder">
                         <a href="#" style="width: 20px; display: inline-block; height: 15px;">
@@ -175,7 +177,7 @@
                                     stroke-width="1.5" stroke="#0000ff" fill="none" stroke-linejoin="round">
                                 </path>
                             </svg></a>
-                        Upvote · 2
+                        Upvote · 4
                     </div>
 
                     <div class="founder__btn_footer">
@@ -193,7 +195,7 @@
                                     class="icon_svg-stroke icon_svg-fill" stroke="#fff" stroke-width="1.5"
                                     fill="#fff"  fill-rule="evenodd" stroke-linecap="round"></path>
                             </svg></div>
-                        <div style="font-size: 14px;  margin-left: 3px">2</div>
+                        <div style="font-size: 14px;  margin-left: 3px">4</div>
                     </div>
 
                     <!-- <div class="founder__comments">
@@ -225,6 +227,18 @@
 
     
 </div>
-
+<script>
+    const date = new Date();
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = String(date.getFullYear()).slice(2);
+    const formattedDate = `${day}.${month}.${year}`;
+  
+    // Ищем все элементы с классом .current-date и вставляем дату
+    document.querySelectorAll('.current-date').forEach(el => {
+      el.textContent = formattedDate;
+    });
+  </script>
+  
      </body>
 </html>

@@ -30,8 +30,13 @@ const isOpen = activeDropdown === "infrostr";
               </a>
             </li>
             <li className="dropdown__infrostr-item">
-              <a href="/infrastructure.html" className="dropdown__infrostr-link">
+              <a href="/magaziny-svytogorska.html" className="dropdown__infrostr-link">
                 магазины
+              </a>
+            </li>
+            <li className="dropdown__infrostr-item">
+              <a href="/infrastructure.html" className="dropdown__infrostr-link">
+                услуги
               </a>
             </li>
           </ul>

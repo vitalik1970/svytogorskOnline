@@ -4,16 +4,20 @@ import React, { useState, useEffect } from 'react';
 const SlideShow = () => {
   const allImages = [
     "./img/slav.jpg",
-    "/img/slav1.png",
+    "/img/slav1.jpg",
    "/img/slav13.jpg",
     "/img/slav3.jpg",
     "/img/slav4.png",
     "/img/slav5.jpg",
     "/img/slav6.jpg",
-    "/img/slav9.png",
+    "/img/slav9.jpg",
     "/img/slav10.jpg",
     "/img/slav11.jpg",
-    "/img/slav12.jpg"
+    "/img/slav12.jpg",
+    "/img/slav14.png",
+    "/img/slav15.jpeg",
+    "/img/slav16.jpg",
+    "/img/slav17.png"
   ];
 
   const [imgNum, setImgNum] = useState(0);

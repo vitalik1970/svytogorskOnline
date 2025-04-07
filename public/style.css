@@ -49,7 +49,6 @@ ul, ul li {
     list-style: none;
 }
 body {
- /* font-family: 'Queen Love Stories free', sans-serif; */
     font-style: normal;
     font-weight: 400;
     color: #1A1A1A;
@@ -79,12 +78,7 @@ svg {
     justify-content: space-between;
     /* border-bottom: 1px solid #fff; */
 }
-.head_menu>ul>li a {
-    color: #fff;
-    font-size: 17px;
-    letter-spacing: 0.6px !important;
-    cursor: pointer;
-}
+
  .header_wrap {
     padding: 5px 0 13px;
     display: -webkit-box;
@@ -128,11 +122,18 @@ svg {
     font-size: clamp(0.813rem, -0.271rem + 2.17vw, 1.625rem);
     font-family: "Kingthings_Petrock", sans-serif;
     cursor: pointer;
+    letter-spacing: 0.6px !important;
 }
+/* .head_menu>ul>li a {
+  color: #fff;
+  font-size: 17px;
+  
+  
+} */
 .logo {
 margin: 10px 0;
 font-family: 'Deutsch Gothic', sans-serif;
-/* font-family: 'Queen Love Stories free', sans-serif; */
+
 letter-spacing: 1.3px;
 color: #fff;
 }
@@ -186,17 +187,18 @@ filter: brightness(2) grayscale(1) opacity(0.5);
   } */
 /* ****************  галереии ************************* */
 .modal-content {
-max-width: 100%;
+/* max-width: 100%; */
     margin: 0 auto;
     position: relative;
+    padding: 0 10px;
 }
 .modal-content-img{
 
-max-height: 750px; 
+/* max-height: 750px;  */
 
 object-fit: cover;          
-object-position: center;    
-width: 100vw;               
+object-position: center top;  
+/* width: 100%;                */
  /* height: 100%; */
 }
 .h-100vh {
@@ -811,6 +813,14 @@ hr:after {
 .transport {
     font-family: 'Kingthings_Petrock';
 } 
+.transport-bg {
+   background-image: url('/img/slav17.png');
+   background-position: center center; 
+   background-size: cover;
+   background-repeat: no-repeat; 
+   background-attachment: fixed;
+}
+
 .bone__transport {
     width: 100%;
     font-family: 'Kingthings_Petrock';
@@ -830,7 +840,7 @@ hr:after {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    margin: 15px 0;
+    margin: 20px 15px;
     font-family: 'Helvetica Neue';
     height: 90vh;
 }
@@ -903,31 +913,37 @@ height:auto;
 }
 .transport__logo-h-a{
     font-size: clamp(1.625rem, 0.925rem + 2.8vw, 3.375rem)!important;
-    font-family: "Kingthings Petrock"!important;
+    font-family: 'Kingthings Petrock';
     color: #fff;
+    text-shadow: 2px 2px 2px black;
 }
 .width-text {
     font-weight: 700;
     font-size: 22px;
     color: #0000007a;
+    text-shadow: 2px 2px 2px black;
 }
 .transport__text {
     font-weight: 700;
     font-size: 34px;
-    margin-left: 20px;  
+    margin-left: 20px; 
+    text-shadow: 2px 2px 2px black; 
 }
 .transport__text-905 {
     font-weight: 700;
     font-size: clamp(1.313rem, 0.919rem + 1.52vw, 2.25rem); 
     margin-left: 20px;   
+    text-shadow: 2px 2px 2px black;
 }
 .width-text-905 {
 display: flex;
 align-items: center;
+text-shadow: 2px 2px 2px black;
 }
 .width-text-905 p {
    font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.75rem);
      margin: 0 20px;
+     text-shadow: 2px 2px 2px black;
 }
 .transport__img {
 width: 50px;
@@ -939,7 +955,8 @@ padding: 0 20px;
 .transport__tx {
 font-size: clamp(1rem, 1rem + 1.2vw, 1.75rem);
 padding: 20px;
-font-family: "Kingthings_Petrock",  sans-serif;;
+font-family: "Kingthings_Petrock",  sans-serif;
+text-shadow: 2px 2px 2px black;
 }
 /* ****************** end  модальное окно ****************** */
 /* ****************** гамбургер   ****************** */
@@ -1259,40 +1276,54 @@ padding: 7px 0;
        
       }
       .infrastructure {
-        width: 100%;
-      max-width: 1400;
+        /* width: 100%; */
+      max-width: 1440px;
       margin: 0 auto;
-      /* padding: 0 24px; */
+      padding: 0 15px;
       color: #fff;
       }
       .infrastructure__ {
         margin-bottom: 15px;
       }
     
-      .infrastructure__header {
+      /* .infrastructure__header {
         display: block;
-        height: 655px; 
-        background-image: url('/img/infrastructura/treshka.png');
+        height: 55px; 
+       
         background-position: center center; 
         background-size: cover;
         background-repeat: no-repeat;
-        margin-bottom: 15px;
-        color: #fff;
+        margin: 130px 15px 15px;
+       
         position: relative;
-        font-family: 'Deutsch Gothic'; 
-      }
-   
+       
+      } */
+      
       .infrastructure__header-top {
+        background-image: url('/img/infrastructura/heder-magaz.png');
         padding: 20px 20px 0 20px;
         font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        font-family: 'Deutsch Gothic';
+        color: #fff;
+        max-width: 1440px;
+        margin: 0 15px 10px;
+        padding: 0 15px;
       }
+      .magaziny__header-top {
+        padding: 20px 20px 0 20px;
+        font-size: 20px;
+        font-family: 'Deutsch Gothic';
+        color: #fff;
+        /* max-width: 1440px;
+        margin: 0 15px 10px;
+        padding: 0 15px; */
+      }
+
       .infrastructure__nav-a {
-        padding: 20px;
+        padding: 20px 0;
         text-shadow: 2px 2px 2px black;
         color: #fff;
+        display: block;
       }
       .kylttovar {
        position: relative;
@@ -1300,6 +1331,9 @@ padding: 7px 0;
       .infrastructure__header-h1 {
         text-shadow: 2px 2px 2px black;
         font-size: clamp(1.188rem, 0.662rem + 2.1vw, 2.5rem);
+        color: #fff;
+        position: relative;
+        font-family: 'Deutsch Gothic'; 
       }
       .desktop {
         display: block;
@@ -1322,15 +1356,32 @@ padding: 7px 0;
     .custom_photos__header {
       /* display: block; */
       /* height: 655px;  */
-      background-image: url('/img/custom_photos/vid_maun.png');
-      background-position: center center; 
+    
+      /* background-position: center center; 
       background-size: cover;
-      background-repeat: no-repeat;
-      margin-bottom: 15px;
+      background-repeat: no-repeat; */
+      margin-bottom: 30px; 
       color: #fff;
       position: relative;
       font-family: 'Deutsch Gothic'; 
       text-shadow: 2px 2px 2px black;
+    }
+    .custom_photos__body {
+      background-image: url('/img/nik.jpg');
+      background-position: center center; 
+      background-size: cover;
+      background-repeat: no-repeat; 
+      background-attachment: fixed;
+      /* position: fixed; */
+      /* left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1f3149;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      z-index: -1;  */
     }
     .custom-file-input {
       display: none;
@@ -1568,3 +1619,15 @@ margin-bottom: 11px;
     }
 }
 /* ****************** бургер  end ****************** */
+/* .bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1f3149;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  z-index: -1;
+} */
