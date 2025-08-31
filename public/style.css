@@ -529,11 +529,12 @@ margin-bottom: 15px;
     top: 0;
     right: 0;
     width: 36px;
-    font-size: 36px;
+    font-size: 32px;
     margin: 20px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background-color: #fff;
 }  
 
 .social {

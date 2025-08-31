@@ -83,6 +83,10 @@ function Gallery(props) {
         <button  className="feedback__close-button" onClick={openModal}>
                             &times;
       </button>
+      <a style={styles.btnPageShow} href="/beautiful-photos.html"
+      >
+                            Смотреть на отдельной странице
+      </a>
         {images.map((image, index) => (
             <GalleryImage key={index} src={image} onClick={() => handleImageClick(image, index)} />
           ))}
@@ -96,3 +100,21 @@ function Gallery(props) {
 }
 
 export default Gallery;
+
+const styles = {
+  btnPageShow: {
+    position: "absolute",
+    top: 3,
+    right: 51,
+     width: 309,
+    fontSize: 19,
+    margin: 20,
+    borderRadius: 8,
+    border: "none",
+    cursor: "pointer",
+    padding: "6px 5px",
+    backgroundColor: "#fff",
+    color: "#252627",
+    boxShadow: "0px 2px 8px rgba(172, 171, 171, 0.3)"
+  }
+}
