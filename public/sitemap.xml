@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://svytogorsk.online</loc>
+      <loc>https://svyatogorsk.online</loc>
       <lastmod>2024-05-13</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/disqus</loc>
+      <loc>https://svyatogorsk.online/disqus</loc>
       <lastmod>2024-05-12</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/purpose_project_ru</loc>
+      <loc>https://svyatogorsk.online/purpose_project_ru</loc>
       <lastmod>2024-05-12</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/index_img</loc>
+      <loc>https://svyatogorsk.online/index_img</loc>
       <lastmod>2024-06-12</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/transport</loc>
+      <loc>https://svyatogorsk.online/transport</loc>
       <lastmod>2024-10-20</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
-      <url>
-      <loc>https://svytogorsk.online/infrastructure</loc>
+   <url>
+      <loc>https://svyatogorsk.online/infrastructure</loc>
       <lastmod>2025-01-25</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/custom_photos.html</loc>
+      <loc>https://svyatogorsk.online/custom_photos</loc>
       <lastmod>2025-02-13</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://svytogorsk.online/magaziny-svytogorska.html</loc>
+      <loc>https://svyatogorsk.online/magaziny-svytogorska</loc>
       <lastmod>2025-04-07</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://svyatogorsk.online/beautiful-photos.html</loc>
+      <loc>https://svyatogorsk.online/beautiful-photos</loc>
       <lastmod>2025-08-31</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>
    </url>
 </urlset>
+
